@@ -1,80 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HD2 Loadout Generator</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+body {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+}
 
-<h1>Helldivers 2 Loadout Generator</h1>
+.wip-disclaimer {
+    margin-top: -8px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    color: #bbb;
+    text-align: center;
+}
 
-<p class="wip-disclaimer">
-  <strong>Work in Progress:</strong> This tool is actively being developed.
-  Enemy faction selection is currently a placeholder and does not affect loadout generation yet.
-</p>
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
 
-<div class="controls">
-  <select id="faction">
-    <option value="bugs">Terminids</option>
-    <option value="bots">Automatons</option>
-  </select>
+.results {
+  max-width: 600px;
+}
 
-  <button id="generate">Generate Loadout</button>
-</div>
+.slot {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
-<div id="status" class="status">Loading…</div>
+.status {
+  color: #666;
+  margin-bottom: 10px;
+}
 
-<div class="results">
 
-  <div class="slot">
-    <strong>Primary</strong>
-    <div id="primaryName">—</div>
-  </div>
+:root {
+    color-scheme: dark;
+}
 
-  <div class="slot">
-    <strong>Secondary</strong>
-    <div id="secondaryName">—</div>
-  </div>
+body {
+    background: #0f1115;
+    color: #e6e6e6;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    margin: 24px;
+}
 
-  <div class="slot">
-    <strong>Grenade</strong>
-    <div id="grenadeName">—</div>
-  </div>
+h1 {
+    margin: 0 0 16px 0;
+}
 
-  <div class="slot">
-    <strong>Stratagems</strong>
-    <ul id="stratagemList"></ul>
-  </div>
+select, button {
+    background: #1b1f2a;
+    color: #e6e6e6;
+    border: 1px solid #2a3142;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
 
-</div>
+    button:hover {
+        filter: brightness(1.08);
+        cursor: pointer;
+    }
 
-<!-- ========================================================= -->
-<!-- FOOTER — LICENSE / ATTRIBUTION (COMMENTED FOR FUTURE USE) -->
-<!-- ========================================================= -->
+#status {
+    margin: 10px 0 16px 0;
+    color: #aab3c5;
+}
 
-<!--
-<footer id="licenseFooter" class="license-footer">
-  <p>
-    Fan-made Helldivers 2 tool. Not affiliated with or endorsed by Arrowhead Game Studios.
-  </p>
-  <p>
-    Stratagem icons and visual assets are sourced from the Helldivers Wiki and are
-    licensed under Creative Commons Attribution–NonCommercial–ShareAlike 4.0 (CC BY-NC-SA 4.0).
-    Assets may have been resized or modified.
-  </p>
-  <p>
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-       target="_blank"
-       rel="noopener noreferrer">
-      https://creativecommons.org/licenses/by-nc-sa/4.0/
-    </a>
-  </p>
-</footer>
--->
+.slot {
+    background: #141824;
+    border: 1px solid #2a3142;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 10px 0;
+}
 
-<script src="app.js?v=Sun01252026_141439"></script>
+    .slot strong {
+        display: block;
+        margin-bottom: 4px;
+        color: #ffffff;
+    }
 
-</body>
-</html>
+#stratagemList {
+    margin: 8px 0 0 18px;
+}
