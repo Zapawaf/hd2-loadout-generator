@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ted_63_dynamite",
+    "name": "TED-63 Dynamite",
+    "icon": "",
+    "tags": [
+      "standard",
+      "pen_heavy"
+    ]
+  },
+  {
+    "id": "g_6_frag",
+    "name": "G-6 Frag",
+    "icon": "",
+    "tags": [
+      "standard",
+      "pen_medium"
+    ]
+  },
+  {
+    "id": "g_12_high_explosive",
+    "name": "G-12 High Explosive",
+    "icon": "",
+    "tags": [
+      "standard",
+      "pen_heavy"
+    ]
+  },
+  {
+    "id": "g_10_incendiary",
+    "name": "G-10 Incendiary",
+    "icon": "",
+    "tags": [
+      "standard",
+      "pen_medium"
+    ]
+  },
+  {
+    "id": "g_7_pineapple",
+    "name": "G-7 Pineapple",
+    "icon": "",
+    "tags": [
+      "standard",
+      "pen_medium"
+    ]
+  }
+]

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HD2 Loadout Generator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<h1>Helldivers 2 Loadout Generator</h1>
+
+<div class="controls">
+  <select id="faction">
+    <option value="bugs">Terminids</option>
+    <option value="bots">Automatons</option>
+  </select>
+
+  <button id="generate">Generate Loadout</button>
+</div>
+
+<div id="status" class="status">Loading…</div>
+
+<div class="results">
+
+  <div class="slot">
+    <strong>Primary</strong>
+    <div id="primaryName">—</div>
+  </div>
+
+  <div class="slot">
+    <strong>Secondary</strong>
+    <div id="secondaryName">—</div>
+  </div>
+
+  <div class="slot">
+    <strong>Grenade</strong>
+    <div id="grenadeName">—</div>
+  </div>
+
+  <div class="slot">
+    <strong>Stratagems</strong>
+    <ul id="stratagemList"></ul>
+  </div>
+
+</div>
+
+<!-- ========================================================= -->
+<!-- FOOTER — LICENSE / ATTRIBUTION (COMMENTED FOR FUTURE USE) -->
+<!-- ========================================================= -->
+
+<!--
+<footer id="licenseFooter" class="license-footer">
+  <p>
+    Fan-made Helldivers 2 tool. Not affiliated with or endorsed by Arrowhead Game Studios.
+  </p>
+  <p>
+    Stratagem icons and visual assets are sourced from the Helldivers Wiki and are
+    licensed under Creative Commons Attribution–NonCommercial–ShareAlike 4.0 (CC BY-NC-SA 4.0).
+    Assets may have been resized or modified.
+  </p>
+  <p>
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+       target="_blank"
+       rel="noopener noreferrer">
+      https://creativecommons.org/licenses/by-nc-sa/4.0/
+    </a>
+  </p>
+</footer>
+-->
+
+<script src="app.js?v=Sun01252026_141439"></script>
+
+</body>
+</html>

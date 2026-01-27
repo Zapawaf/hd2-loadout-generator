@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ar_23_liberator",
+    "name": "AR-23 Liberator",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "ar_23p_liberator_penetrator",
+    "name": "AR-23P Liberator Penetrator",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_medium",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "ar_23c_liberator_concussive",
+    "name": "AR-23C Liberator Concussive",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "sta_52_assault_rifle",
+    "name": "StA-52 Assault Rifle",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "ar_32_pacifier",
+    "name": "AR-32 Pacifier",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_medium",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "ar_2_coyote",
+    "name": "AR-2 Coyote",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_medium",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "ma5c_assault_rifle",
+    "name": "MA5C Assault Rifle",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_medium",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "ar_23a_liberator_carbine",
+    "name": "AR-23A Liberator Carbine",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "ar_61_tenderizer",
+    "name": "AR-61 Tenderizer",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "br_14_adjudicator",
+    "name": "BR-14 Adjudicator",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_medium",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "ar_gl_21_one_two",
+    "name": "AR/GL-21 One-Two",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "ar_59_suppressor",
+    "name": "AR-59 Suppressor",
+    "icon": "",
+    "tags": [
+      "assault_rifle",
+      "pen_light",
+      "two_handed"
+    ]
+  }
+]

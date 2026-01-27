@@ -1,0 +1,258 @@
+[
+  {
+    "id": "mg_43_machine_gun",
+    "name": "MG-43 Machine Gun",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "apw_1_anti_materiel_rifle",
+    "name": "APW-1 Anti-Materiel Rifle",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "m_105_stalwart",
+    "name": "M-105 Stalwart",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "eat_17_expendable_anti_tank",
+    "name": "EAT-17 Expendable Anti-Tank",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 70
+  },
+  {
+    "id": "gr_8_recoilless_rifle",
+    "name": "GR-8 Recoilless Rifle",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "flam_40_flamethrower",
+    "name": "FLAM-40 Flamethrower",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "ac_8_autocannon",
+    "name": "AC-8 Autocannon",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "mg_206_heavy_machine_gun",
+    "name": "MG-206 Heavy Machine Gun",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "rl_77_airburst_rocket_launcher",
+    "name": "RL-77 Airburst Rocket Launcher",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "mls_4x_commando",
+    "name": "MLS-4X Commando",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 120
+  },
+  {
+    "id": "rs_422_railgun",
+    "name": "RS-422 Railgun",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "faf_14_spear",
+    "name": "FAF-14 Spear",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "sta_x3_w_a_s_p_launcher",
+    "name": "StA-X3 W.A.S.P. Launcher",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "arc_3_arc_thrower",
+    "name": "ARC-3 Arc Thrower",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "gl_21_grenade_launcher",
+    "name": "GL-21 Grenade Launcher",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "las_98_laser_cannon",
+    "name": "LAS-98 Laser Cannon",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "las_99_quasar_cannon",
+    "name": "LAS-99 Quasar Cannon",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "tx_41_sterilizer",
+    "name": "TX-41 Sterilizer",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "gl_52_de_escalator",
+    "name": "GL-52 De-Escalator",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "plas_45_epoch",
+    "name": "PLAS-45 Epoch",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "s_11_speargun",
+    "name": "S-11 Speargun",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "m_1000_maxigun",
+    "name": "M-1000 Maxigun",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "ms_11_solo_silo",
+    "name": "MS-11 Solo Silo",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 180
+  },
+  {
+    "id": "cqc_1_one_true_flag",
+    "name": "CQC-1 One True Flag",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "cqc_9_defoliation_tool",
+    "name": "CQC-9 Defoliation Tool",
+    "icon": "",
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
+    "cooldown_sec": 480
+  }
+]

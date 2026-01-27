@@ -1,0 +1,160 @@
+[
+  {
+    "id": "b_1_supply_pack",
+    "name": "B-1 Supply Pack",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "ax_ar_23_guard_dog",
+    "name": "AX/AR-23 Guard Dog",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "ax_arc_3_guard_dog_k_9",
+    "name": "AX/ARC-3 Guard Dog K-9",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "ax_flam_75_guard_dog_hot_dog",
+    "name": "AX/FLAM-75 Guard Dog Hot Dog",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "ax_las_5_guard_dog_rover",
+    "name": "AX/LAS-5 Guard Dog Rover",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "ax_tx_13_guard_dog_dog_breath",
+    "name": "AX/TX-13 Guard Dog Dog Breath",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "b_100_portable_hellbomb",
+    "name": "B-100 Portable Hellbomb",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 300
+  },
+  {
+    "id": "b_md_c4_pack",
+    "name": "B/MD C4 Pack",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot",
+      "support_weapon"
+
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "lift_182_warp_pack",
+    "name": "LIFT-182 Warp Pack",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "lift_850_jump_pack",
+    "name": "LIFT-850 Jump Pack",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "lift_860_hover_pack",
+    "name": "LIFT-860 Hover Pack",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "sh_20_ballistic_shield_backpack",
+    "name": "SH-20 Ballistic Shield Backpack",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot",
+      "requires_one_handed_primary"
+    ],
+    "cooldown_sec": 300
+  },
+  {
+    "id": "sh_32_shield_generator_pack",
+    "name": "SH-32 Shield Generator Pack",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "sh_51_directional_shield",
+    "name": "SH-51 Directional Shield",
+    "icon": "",
+    "tags": [
+      "supply",
+      "backpack",
+      "uses_backpack_slot",
+      "requires_one_handed_primary"
+    ],
+    "cooldown_sec": 300
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "mp_98_knight",
+    "name": "MP-98 Knight",
+    "icon": "",
+    "tags": [
+      "submachine_gun",
+      "pen_light",
+      "one_handed"
+    ]
+  },
+  {
+    "id": "sta_11_smg",
+    "name": "StA-11 SMG",
+    "icon": "",
+    "tags": [
+      "submachine_gun",
+      "pen_light",
+      "one_handed"
+    ]
+  },
+  {
+    "id": "m7s_smg",
+    "name": "M7S SMG",
+    "icon": "",
+    "tags": [
+      "submachine_gun",
+      "pen_light",
+      "one_handed"
+    ]
+  },
+  {
+    "id": "smg_32_reprimand",
+    "name": "SMG-32 Reprimand",
+    "icon": "",
+    "tags": [
+      "submachine_gun",
+      "pen_medium",
+      "one_handed"
+    ]
+  },
+  {
+    "id": "smg_37_defender",
+    "name": "SMG-37 Defender",
+    "icon": "",
+    "tags": [
+      "submachine_gun",
+      "pen_light",
+      "one_handed"
+    ]
+  },
+  {
+    "id": "smg_72_pummeler",
+    "name": "SMG-72 Pummeler",
+    "icon": "",
+    "tags": [
+      "submachine_gun",
+      "pen_light",
+      "one_handed"
+    ]
+  }
+]

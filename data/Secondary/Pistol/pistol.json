@@ -1,0 +1,62 @@
+[
+  {
+    "id": "p_92_warrant",
+    "name": "P-92 Warrant",
+    "icon": "",
+    "tags": [
+      "pistol",
+      "pen_medium",
+      "one_handed"
+    ]
+  },
+  {
+    "id": "p_2_peacemaker",
+    "name": "P-2 Peacemaker",
+    "icon": "",
+    "tags": [
+      "pistol",
+      "pen_light",
+      "one_handed"
+    ]
+  },
+  {
+    "id": "p_19_redeemer",
+    "name": "P-19 Redeemer",
+    "icon": "",
+    "tags": [
+      "pistol",
+      "pen_light",
+      "one_handed"
+    ]
+  },
+  {
+    "id": "p_113_verdict",
+    "name": "P-113 Verdict",
+    "icon": "",
+    "tags": [
+      "pistol",
+      "pen_medium",
+      "one_handed"
+    ]
+  },
+  {
+    "id": "m6c_socom_pistol",
+    "name": "M6C/SOCOM Pistol",
+    "icon": "",
+    "tags": [
+      "pistol",
+      "pen_light",
+      "one_handed"
+    ]
+  },
+  {
+    "id": "p_4_senator",
+    "name": "P-4 Senator",
+    "icon": "",
+    "tags": [
+      "pistol",
+      "pen_heavy",
+      "one_handed"
+    ]
+  }
+]

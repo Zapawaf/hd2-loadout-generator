@@ -1,0 +1,52 @@
+[
+  {
+    "id": "e_mg_101_hmg_emplacement",
+    "name": "E/MG-101 HMG Emplacement",
+    "icon": "",
+    "tags": [
+      "defensive",
+      "emplacement"
+    ],
+    "cooldown_sec": 180
+  },
+  {
+    "id": "e_gl_21_grenadier_battlement",
+    "name": "E/GL-21 Grenadier Battlement",
+    "icon": "",
+    "tags": [
+      "defensive",
+      "emplacement"
+    ],
+    "cooldown_sec": 120
+  },
+  {
+    "id": "e_at_12_anti_tank_emplacement",
+    "name": "E/AT-12 Anti-Tank Emplacement",
+    "icon": "",
+    "tags": [
+      "defensive",
+      "emplacement"
+    ],
+    "cooldown_sec": 180
+  },
+  {
+    "id": "fx_12_shield_generator_relay",
+    "name": "FX-12 Shield Generator Relay",
+    "icon": "",
+    "tags": [
+      "defensive",
+      "emplacement"
+    ],
+    "cooldown_sec": 90
+  },
+  {
+    "id": "a_arc_3_tesla_tower",
+    "name": "A/ARC-3 Tesla Tower",
+    "icon": "",
+    "tags": [
+      "defensive",
+      "emplacement"
+    ],
+    "cooldown_sec": 120
+  }
+]

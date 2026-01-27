@@ -1,0 +1,82 @@
+[
+  {
+    "id": "eagle_strafing_run",
+    "name": "Eagle Strafing Run",
+    "icon": "",
+    "tags": [
+      "offensive",
+      "eagle"
+    ],
+    "cooldown_sec": 8
+  },
+  {
+    "id": "eagle_airstrike",
+    "name": "Eagle Airstrike",
+    "icon": "",
+    "tags": [
+      "offensive",
+      "eagle"
+    ],
+    "cooldown_sec": 8
+  },
+  {
+    "id": "eagle_cluster_bomb",
+    "name": "Eagle Cluster Bomb",
+    "icon": "",
+    "tags": [
+      "offensive",
+      "eagle"
+    ],
+    "cooldown_sec": 8
+  },
+  {
+    "id": "eagle_napalm_airstrike",
+    "name": "Eagle Napalm Airstrike",
+    "icon": "",
+    "tags": [
+      "offensive",
+      "eagle"
+    ],
+    "cooldown_sec": 8
+  },
+  {
+    "id": "eagle_smoke_strike",
+    "name": "Eagle Smoke Strike",
+    "icon": "",
+    "tags": [
+      "offensive",
+      "eagle"
+    ],
+    "cooldown_sec": 8
+  },
+  {
+    "id": "eagle_110mm_rocket_pods",
+    "name": "Eagle 110mm Rocket Pods",
+    "icon": "",
+    "tags": [
+      "offensive",
+      "eagle"
+    ],
+    "cooldown_sec": 8
+  },
+  {
+    "id": "eagle_500kg_bomb",
+    "name": "Eagle 500kg Bomb",
+    "icon": "",
+    "tags": [
+      "offensive",
+      "eagle"
+    ],
+    "cooldown_sec": 8
+  },
+  {
+    "id": "eagle_rearm",
+    "name": "Eagle Rearm",
+    "icon": "",
+    "tags": [
+      "offensive",
+      "eagle"
+    ],
+    "cooldown_sec": 150
+  }
+]
