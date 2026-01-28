@@ -32,7 +32,12 @@ const CONFIG = {
     REQUIRE_AT_LEAST_ONE_SUPPORT_WEAPON: true, // support_weapon => damage-capable
 
     // Retry attempts (brute force generation)
-    MAX_GENERATION_ATTEMPTS: 250
+    MAX_GENERATION_ATTEMPTS: 250,
+
+    // Edge case:
+    // MS-11 Solo Silo is NOT allowed to be the only support weapon in the loadout
+    SOLO_SILO_ID: "ms_11_solo_silo",
+    DISALLOW_SOLO_SILO_AS_ONLY_SUPPORT_WEAPON: true
 };
 
 // ============================================================
@@ -73,11 +78,53 @@ async function loadJson(path) {
 }
 
 async function loadAndMerge(paths) {
-    const lists = await Promise.all(paths.map(loadJson));
+    const lists = await Promise.all(paths.map(async (path) => {
+        const items = await loadJson(path);
+
+        // Convert a JSON path like:
+        //   ./data/Primary/Assault Rifle/assault.json
+        // into an image base path like:
+        //   img/Primary/Assault Rifle
+        const imgBase = encodeURI(
+            path
+                .replace(/^\.\//, "")          // strip leading "./"
+                .replace(/^data\//, "img/")     // data -> img
+                .replace(/\/[^\/]+\.json$/i, "") // drop filename
+        );
+
+        return (items || []).map(it => ({
+            ...it,
+            // Deterministic: id => img path based on where the JSON came from
+            icon: `${imgBase}/${it.id}.png`,
+            _src: path
+        }));
+    }));
+
     // Flatten and filter out any non-object garbage just in case
     return lists.flat().filter(x => x && typeof x === "object");
 }
 
+
+function setIcon(imgEl, src, alt) {
+    if (!imgEl) return;
+
+    imgEl.alt = alt || "icon";
+
+    if (!src) {
+        imgEl.removeAttribute("src");
+        imgEl.style.visibility = "hidden";
+        return;
+    }
+
+    imgEl.style.visibility = "visible";
+    imgEl.src = src;
+
+    // If image is missing, hide it instead of showing a broken icon
+    imgEl.onerror = () => {
+        imgEl.removeAttribute("src");
+        imgEl.style.visibility = "hidden";
+    };
+}
 // ============================================================
 // SECTION 4.5 — STRATAGEM DISPLAY ORDER HELPERS
 // ============================================================
@@ -170,104 +217,6 @@ async function loadAllData() {
     $("status").textContent = "Ready.";
 }
 
-
-// ============================================================
-// SECTION 6.5 — ICON PATH HELPERS (derive from IDs + tags)
-// ============================================================
-
-function firstTagMatch(item, tagToFolder) {
-    if (!item || !Array.isArray(item.tags)) return null;
-    for (const t of item.tags) {
-        if (tagToFolder[t]) return tagToFolder[t];
-    }
-    return null;
-}
-
-function buildIconPath(parts) {
-    // Encode spaces safely (e.g., "Assault Rifle" => "Assault%20Rifle")
-    return encodeURI(parts.join("/"));
-}
-
-function getIconPath(item, kind) {
-    if (!item || !item.id) return "";
-
-    if (kind === "primary") {
-        const map = {
-            "assault_rifle": "Assault Rifle",
-            "energy_based": "Energy-Based",
-            "explosive": "Explosive",
-            "marksmen_rifle": "Marksmen Rifle",
-            "shotgun": "Shotgun",
-            "special": "Special",
-            "submachine_gun": "Submachine Gun"
-        };
-        const folder = firstTagMatch(item, map) || "Special";
-        return buildIconPath(["img", "Primary", folder, `${item.id}.png`]);
-    }
-
-    if (kind === "secondary") {
-        const map = {
-            "melee": "Melee",
-            "pistol": "Pistol",
-            "special": "Special"
-        };
-        const folder = firstTagMatch(item, map) || "Special";
-        return buildIconPath(["img", "Secondary", folder, `${item.id}.png`]);
-    }
-
-    if (kind === "throwable") {
-        const map = {
-            "standard": "Standard",
-            "special": "Special"
-        };
-        const folder = firstTagMatch(item, map) || "Special";
-        return buildIconPath(["img", "Throwable", folder, `${item.id}.png`]);
-    }
-
-    if (kind === "stratagem") {
-        // Determine top-level category first
-        let category = "Supply";
-        if (hasTag(item, "offensive")) category = "Offensive";
-        else if (hasTag(item, "defensive")) category = "Defensive";
-
-        // Determine subfolder from tags
-        let sub = "Weapons";
-        if (category === "Offensive") {
-            sub = hasTag(item, "eagle") ? "Eagle Airstrikes" : "Orbitals";
-        } else if (category === "Defensive") {
-            if (hasTag(item, "emplacement")) sub = "Emplacements";
-            else if (hasTag(item, "mine")) sub = "Mines";
-            else sub = "Sentries";
-        } else {
-            // Supply
-            if (hasTag(item, "backpack")) sub = "Backpacks";
-            else if (hasTag(item, "vehicle")) sub = "Vehicles";
-            else sub = "Weapons";
-        }
-
-        return buildIconPath(["img", "Stratagems", category, sub, `${item.id}.png`]);
-    }
-
-    return "";
-}
-
-function setIcon(imgEl, src, alt) {
-    if (!imgEl) return;
-    imgEl.alt = alt || "icon";
-    if (!src) {
-        imgEl.removeAttribute("src");
-        imgEl.style.visibility = "hidden";
-        return;
-    }
-    imgEl.src = src;
-    imgEl.style.visibility = "visible";
-    // If image is missing, hide it instead of showing broken icon
-    imgEl.onerror = () => {
-        imgEl.removeAttribute("src");
-        imgEl.style.visibility = "hidden";
-    };
-}
-
 // ============================================================
 // SECTION 7 — RENDERING
 // ============================================================
@@ -277,9 +226,9 @@ function renderLoadout({ primary, secondary, grenade, stratagems }, note = "") {
     $("secondaryName").textContent = secondary?.name ?? "—";
     $("grenadeName").textContent = grenade?.name ?? "—";
 
-    setIcon($("primaryIcon"), getIconPath(primary, "primary"), primary?.name ?? "Primary icon");
-    setIcon($("secondaryIcon"), getIconPath(secondary, "secondary"), secondary?.name ?? "Secondary icon");
-    setIcon($("grenadeIcon"), getIconPath(grenade, "throwable"), grenade?.name ?? "Grenade icon");
+    setIcon($("primaryIcon"), primary?.icon ?? "", primary?.name ?? "Primary icon");
+    setIcon($("secondaryIcon"), secondary?.icon ?? "", secondary?.name ?? "Secondary icon");
+    setIcon($("grenadeIcon"), grenade?.icon ?? "", grenade?.name ?? "Grenade icon");
 
     const ul = $("stratagemList");
     ul.innerHTML = "";
@@ -290,7 +239,7 @@ function renderLoadout({ primary, secondary, grenade, stratagems }, note = "") {
 
         const img = document.createElement("img");
         img.className = "item-icon";
-        setIcon(img, getIconPath(s, "stratagem"), s?.name ?? "Stratagem icon");
+        setIcon(img, s?.icon ?? "", s?.name ?? "Stratagem icon");
 
         const span = document.createElement("span");
         span.textContent = s?.name ?? "—";
@@ -339,6 +288,14 @@ function pickStratagemsWithRules() {
     if (CONFIG.REQUIRE_AT_LEAST_ONE_SUPPORT_WEAPON) {
         const hasAtLeastOneSupportWeapon = picked.some(s => hasTag(s, "support_weapon"));
         if (!hasAtLeastOneSupportWeapon) return null;
+    }
+
+    // Edge case: Solo Silo cannot be the ONLY support weapon
+    if (CONFIG.DISALLOW_SOLO_SILO_AS_ONLY_SUPPORT_WEAPON) {
+        const supportWeapons = picked.filter(s => hasTag(s, "support_weapon"));
+        if (supportWeapons.length === 1 && supportWeapons[0]?.id === CONFIG.SOLO_SILO_ID) {
+            return null;
+        }
     }
 
     return picked;
