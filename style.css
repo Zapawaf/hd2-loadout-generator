@@ -1,6 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
-  padding: 16px;
+    font-family: Arial, sans-serif;
+    padding: 16px;
 }
 
 .wip-disclaimer {
@@ -12,24 +12,24 @@ body {
 }
 
 .controls {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .results {
-  max-width: 600px;
+    max-width: 600px;
 }
 
 .slot {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .status {
-  color: #666;
-  margin-bottom: 10px;
+    color: #666;
+    margin-bottom: 10px;
 }
 
 
@@ -82,4 +82,119 @@ select, button {
 
 #stratagemList {
     margin: 8px 0 0 18px;
+}
+
+/* ============================================================
+   HD2 UI — Two-column layout + Helldivers yellow styling
+   ============================================================ */
+
+:root {
+    --hd-yellow: #f4e43b;
+}
+
+/* Headings */
+h1 {
+    color: var(--hd-yellow);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Make results area wider */
+.results {
+    max-width: 1100px;
+}
+
+/* Two-column layout */
+.loadout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.loadout-left,
+.loadout-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Slot cards (use your existing dark theme look) */
+.slot-card {
+    border: 1px solid #2a3142;
+    background: linear-gradient(145deg, #0f1520, #0b0f17);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+    /* Yellow section titles */
+    .slot-card > strong {
+        display: block;
+        color: var(--hd-yellow);
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+/* Icon + name row */
+.item-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Default icon size (used by stratagem list) */
+.item-icon {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #0f1115;
+    border: 1px solid #2a3142;
+}
+
+/* Bigger icons for the three main slots */
+.item-icon-large {
+    width: 120px;
+    height: 120px;
+}
+
+.item-name,
+.stratagem-list li span {
+    color: var(--hd-yellow);
+    font-weight: 500;
+    text-shadow: 0 0 6px rgba(244,228,59,0.15);
+}
+
+/* Stratagem list layout */
+.stratagem-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .stratagem-list li {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 12px;
+        border: 1px solid #2a3142;
+        border-radius: 10px;
+        background: rgba(15,21,32,0.6);
+    }
+
+/* Keep right side visible; scroll the stratagem panel if needed */
+.loadout-right {
+    max-height: calc(100vh - 230px);
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+/* Footer visible + readable */
+.license-footer {
+    color: #aab3c5;
 }
