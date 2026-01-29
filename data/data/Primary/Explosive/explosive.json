@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cb_9_exploding_crossbow",
+    "name": "CB-9 Exploding Crossbow",
+    "icon": "img/Primary/Explosive/cb_9_exploding_crossbow.png",
+    "tags": [
+      "explosive",
+      "pen_medium",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "r_36_eruptor",
+    "name": "R-36 Eruptor",
+    "icon": "img/Primary/Explosive/r_36_eruptor.png",
+    "tags": [
+      "explosive",
+      "pen_heavy",
+      "two_handed"
+    ]
+  }
+]
