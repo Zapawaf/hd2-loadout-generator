@@ -1,0 +1,32 @@
+[
+  {
+    "id": "vg_70_variable",
+    "name": "VG-70 Variable",
+    "icon": "img/Primary/Special/vg_70_variable.png",
+    "tags": [
+      "special",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "flam_66_torcher",
+    "name": "FLAM-66 Torcher",
+    "icon": "img/Primary/Special/flam_66_torcher.png",
+    "tags": [
+      "special",
+      "pen_heavy",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "jar_5_dominator",
+    "name": "JAR-5 Dominator",
+    "icon": "img/Primary/Special/jar_5_dominator.png",
+    "tags": [
+      "special",
+      "pen_medium",
+      "two_handed"
+    ]
+  }
+]

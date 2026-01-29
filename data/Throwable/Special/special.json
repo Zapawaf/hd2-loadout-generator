@@ -1,0 +1,112 @@
+[
+  {
+    "id": "g_16_impact",
+    "name": "G-16 Impact",
+    "icon": "img/Throwable/Special/g_16_impact.png",
+    "tags": [
+      "special",
+      "pen_heavy"
+    ]
+  },
+  {
+    "id": "g_13_incendiary_impact",
+    "name": "G-13 Incendiary Impact",
+    "icon": "img/Throwable/Special/g_13_incendiary_impact.png",
+    "tags": [
+      "special",
+      "pen_medium"
+    ]
+  },
+  {
+    "id": "g_23_stun",
+    "name": "G-23 Stun",
+    "icon": "img/Throwable/Special/g_23_stun.png",
+    "tags": [
+      "special"
+    ]
+  },
+  {
+    "id": "g_4_gas",
+    "name": "G-4 Gas",
+    "icon": "img/Throwable/Special/g_4_gas.png",
+    "tags": [
+      "special"
+    ]
+  },
+  {
+    "id": "g_50_seeker",
+    "name": "G-50 Seeker",
+    "icon": "img/Throwable/Special/g_50_seeker.png",
+    "tags": [
+      "special",
+      "pen_heavy"
+    ]
+  },
+  {
+    "id": "g_3_smoke",
+    "name": "G-3 Smoke",
+    "icon": "img/Throwable/Special/g_3_smoke.png",
+    "tags": [
+      "special"
+    ]
+  },
+  {
+    "id": "g_123_thermite",
+    "name": "G-123 Thermite",
+    "icon": "img/Throwable/Special/g_123_thermite.png",
+    "tags": [
+      "special"
+    ]
+  },
+  {
+    "id": "k_2_throwing_knife",
+    "name": "K-2 Throwing Knife",
+    "icon": "img/Throwable/Special/k_2_throwing_knife.png",
+    "tags": [
+      "special",
+      "pen_medium"
+    ]
+  },
+  {
+    "id": "g_142_pyrotech",
+    "name": "G-142 Pyrotech",
+    "icon": "img/Throwable/Special/g_142_pyrotech.png",
+    "tags": [
+      "special",
+      "pen_medium"
+    ]
+  },
+  {
+    "id": "g_109_urchin",
+    "name": "G-109 Urchin",
+    "icon": "img/Throwable/Special/g_109_urchin.png",
+    "tags": [
+      "special"
+    ]
+  },
+  {
+    "id": "g_31_arc",
+    "name": "G-31 Arc",
+    "icon": "img/Throwable/Special/g_31_arc.png",
+    "tags": [
+      "special",
+      "pen_heavy"
+    ]
+  },
+  {
+    "id": "tm_1_lure_mine",
+    "name": "TM-1 Lure Mine",
+    "icon": "img/Throwable/Special/tm_1_lure_mine.png",
+    "tags": [
+      "special"
+    ]
+  },
+  {
+    "id": "g_89_smokescreen",
+    "name": "G-89 Smokescreen",
+    "icon": "img/Throwable/Special/g_89_smokescreen.png",
+    "tags": [
+      "special"
+    ]
+  }
+]

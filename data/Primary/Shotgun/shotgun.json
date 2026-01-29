@@ -1,0 +1,92 @@
+[
+  {
+    "id": "sg_8_punisher",
+    "name": "SG-8 Punisher",
+    "icon": "img/Primary/Shotgun/sg_8_punisher.png",
+    "tags": [
+      "shotgun",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "sg_8s_slugger",
+    "name": "SG-8S Slugger",
+    "icon": "img/Primary/Shotgun/sg_8s_slugger.png",
+    "tags": [
+      "shotgun",
+      "pen_medium",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "sg_20_halt",
+    "name": "SG-20 Halt",
+    "icon": "img/Primary/Shotgun/sg_20_halt.png",
+    "tags": [
+      "shotgun",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "sg_451_cookout",
+    "name": "SG-451 Cookout",
+    "icon": "img/Primary/Shotgun/sg_451_cookout.png",
+    "tags": [
+      "shotgun",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "dbs_2_double_freedom",
+    "name": "DBS-2 Double Freedom",
+    "icon": "img/Primary/Shotgun/dbs_2_double_freedom.png",
+    "tags": [
+      "shotgun",
+      "pen_medium",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "m90a_shotgun",
+    "name": "M90A Shotgun",
+    "icon": "img/Primary/Shotgun/m90a_shotgun.png",
+    "tags": [
+      "shotgun",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "sg_225_breaker",
+    "name": "SG-225 Breaker",
+    "icon": "img/Primary/Shotgun/sg_225_breaker.png",
+    "tags": [
+      "shotgun",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "sg_225sp_breaker_spray_pray",
+    "name": "SG-225SP Breaker Spray&Pray",
+    "icon": "img/Primary/Shotgun/sg_225sp_breaker_spray_pray.png",
+    "tags": [
+      "shotgun",
+      "pen_light",
+      "two_handed"
+    ]
+  },
+  {
+    "id": "sg_225ie_breaker_incendiary",
+    "name": "SG-225IE Breaker Incendiary",
+    "icon": "img/Primary/Shotgun/sg_225ie_breaker_incendiary.png",
+    "tags": [
+      "shotgun",
+      "pen_light",
+      "two_handed"
+    ]
+  }
+]
