@@ -92,6 +92,16 @@ select, button {
         min-height: 0; /* 🔑 critical */
     }
 
+    /* Group headers (Equipment / Stratagems-style) */
+    .group-title {
+        color: var(--yellow);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+
 /* ======================================================
    SLOT CARDS (LEFT)
    ====================================================== */
