@@ -24,14 +24,6 @@ h1 {
     text-transform: uppercase;
 }
 
-.wip-disclaimer {
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 0.95rem;
-    color: #bbb;
-    text-align: center;
-}
-
 .controls {
     display: flex;
     gap: 10px;
@@ -58,48 +50,59 @@ select, button {
 }
 
 /* ======================================================
-   LOADOUT LAYOUT (FINAL – FLEX ONLY, RESPONSIVE)
+   MAIN GRID — BOTH SIDES SAME HEIGHT
    ====================================================== */
 
 .results.loadout-grid {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: stretch; /* 🔑 equal column height */
     width: 100%;
 }
 
-/* LEFT: Primary / Secondary / Grenade */
+/* LEFT COLUMN */
 .loadout-left {
-    flex: 1 1 360px;
-    min-width: 300px;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
-/* RIGHT: Stratagems */
+/* RIGHT COLUMN */
 .loadout-right {
-    flex: 1.2 1 420px;
-    min-width: 300px;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    /* IMPORTANT: never allow nested scrolling */
-    max-height: none;
-    overflow: visible;
+    min-height: 0; /* 🔑 allow shrinking */
 }
+
+    /* ======================================================
+   OUTER GROUP BOXES
+   ====================================================== */
+
+    .loadout-group,
+    .loadout-right .slot-card {
+        background: radial-gradient(circle at top left, var(--panel1), var(--panel2));
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex: 1; /* 🔑 equal outer height */
+        min-height: 0; /* 🔑 critical */
+    }
 
 /* ======================================================
-   SLOT CARDS
+   SLOT CARDS (LEFT)
    ====================================================== */
 
 .slot-card {
-    background: radial-gradient(circle at top left, var(--panel1), var(--panel2));
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 16px;
+    background: linear-gradient(145deg, #0f1520, #0b0f17);
 }
 
-    /* Section headers */
     .slot-card > strong {
         display: block;
         margin-bottom: 12px;
@@ -109,7 +112,7 @@ select, button {
     }
 
 /* ======================================================
-   ITEM ROWS / ICONS
+   ITEM ROWS
    ====================================================== */
 
 .item-row {
@@ -118,7 +121,7 @@ select, button {
     gap: 16px;
 }
 
-/* Base icon styling (applies to ALL icons) */
+/* Base icon */
 .item-icon {
     object-fit: contain;
     border-radius: 12px;
@@ -127,49 +130,58 @@ select, button {
     padding: 10px;
 }
 
-/* Large icons (Primary / Secondary / Grenade) */
+/* LEFT icons */
 .item-icon-large {
     width: 110px;
     height: 110px;
 }
 
-/* Names */
-.item-name,
-.stratagem-list li span {
-    color: var(--yellow);
-    font-weight: 600;
-    white-space: normal;
-    word-break: break-word;
-}
+/* ======================================================
+   STRATAGEMS — FILL SPACE, NO OVERFLOW
+   ====================================================== */
 
-/* Stratagem list */
 .stratagem-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    flex: 1; /* 🔑 fill remaining height */
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-height: 0;
 }
 
     .stratagem-list li {
+        flex: 1; /* 🔑 even distribution */
         display: flex;
         align-items: center;
-        gap: 14px;
-        background: linear-gradient(145deg, #0f1520, #0b0f17);
+        gap: 16px;
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 10px 12px;
+        background: linear-gradient(145deg, #0f1520, #0b0f17);
+        min-height: 0;
     }
 
-    /* Stratagem icons */
+    /* Stratagem icons — larger but constrained */
     .stratagem-list .item-icon {
-        width: 88px;
-        height: 88px;
+        width: 96px;
+        height: 96px;
+        padding: 10px;
+    }
+
+    /* Text */
+    .item-name,
+    .stratagem-list span {
+        color: var(--yellow);
+        font-weight: 600;
+        white-space: normal;
+        word-break: break-word;
+        font-size: 1.02rem;
     }
 
 /* ======================================================
-   RESPONSIVE TUNING
+   RESPONSIVE
    ====================================================== */
 
 @media (max-width: 900px) {
@@ -179,15 +191,8 @@ select, button {
     }
 
     .stratagem-list .item-icon {
-        width: 72px;
-        height: 72px;
-    }
-}
-
-@media (max-width: 700px) {
-    .loadout-left,
-    .loadout-right {
-        min-width: 240px;
+        width: 80px;
+        height: 80px;
     }
 }
 
@@ -196,35 +201,30 @@ select, button {
         margin: 16px;
     }
 
-    .slot-card {
-        padding: 12px;
-    }
-
-    .item-row {
-        gap: 12px;
-    }
-
     .item-icon-large {
         width: 72px;
         height: 72px;
     }
 
     .stratagem-list .item-icon {
-        width: 60px;
-        height: 60px;
+        width: 64px;
+        height: 64px;
     }
 }
 
-/* Footer */
+/* ======================================================
+   FOOTER
+   ====================================================== */
+
 .license-footer {
-    padding-top: 120px; /* ~3 lines worth of space */
+    padding-top: 120px;
     text-align: center;
     color: #c9c9c9;
     font-size: 0.9rem;
 }
 
     .license-footer p {
-        margin: 0 0 10px 0; /* keeps paragraphs tidy */
+        margin: 0 0 10px 0;
     }
 
     .license-footer a {
