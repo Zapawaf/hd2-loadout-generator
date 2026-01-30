@@ -215,6 +215,13 @@ async function loadAllData() {
     }
 
     $("status").textContent = "Ready.";
+
+  // Generate a loadout on first page load so the UI isn't empty
+  try {
+    generateLoadout();
+  } catch (e) {
+    console.error(e);
+  }
 }
 
 // ============================================================
@@ -359,6 +366,11 @@ $("generate").addEventListener("click", () => {
         console.error(err);
         $("status").textContent = err?.message ?? "Unknown error generating loadout.";
     }
+});
+
+// Auto-generate a new loadout if the user changes the dropdown
+$("faction").addEventListener("change", () => {
+    generateLoadout();
 });
 
 // Boot
