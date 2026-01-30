@@ -213,6 +213,31 @@ select, button {
 }
 
 /* ======================================================
+   MOBILE LAYOUT FIX (STACK ICON ABOVE TEXT)
+   Prevents vertical letter stacking on small screens
+   ====================================================== */
+
+@media (max-width: 600px) {
+
+    .item-row,
+    .stratagem-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+        .item-name,
+        .stratagem-list li span {
+            writing-mode: horizontal-tb;
+            text-orientation: mixed;
+            white-space: normal;
+            word-break: normal;
+            margin-top: 8px;
+            font-size: 1rem;
+        }
+}
+
+/* ======================================================
    FOOTER
    ====================================================== */
 
