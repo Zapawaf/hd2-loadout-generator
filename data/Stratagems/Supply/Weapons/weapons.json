@@ -259,21 +259,31 @@
     "id": "cqc_20_breaching_hammer",
     "name": "CQC-20 Breaching Hammer",
     "icon": "img/Stratagems/Supply/Weapons/cqc_20_breaching_hammer.png",
-    "tags": ["supply", "support_weapon"],
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
     "cooldown_sec": 410
   },
   {
     "id": "gl_28_belt_fed_grenade_launcher",
     "name": "GL-28 Belt-Fed Grenade Launcher",
     "icon": "img/Stratagems/Supply/Weapons/gl_28_belt_fed_grenade_launcher.png",
-    "tags": ["supply", "support_weapon", "uses_backpack_slot"],
+    "tags": [
+      "supply",
+      "support_weapon",
+      "uses_backpack_slot"
+    ],
     "cooldown_sec": 410
   },
   {
     "id": "eat_411_leveller",
     "name": "EAT-411 Leveller",
     "icon": "img/Stratagems/Supply/Weapons/eat_411_leveller.png",
-    "tags": ["supply", "support_weapon"],
+    "tags": [
+      "supply",
+      "support_weapon"
+    ],
     "cooldown_sec": 120
   }
 ]
