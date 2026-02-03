@@ -108,5 +108,11 @@
     "tags": [
       "special"
     ]
+  },
+  {
+    "id": "g_sh_39_shield",
+    "name": "G/SH-39 Shield",
+    "icon": "img/Throwable/Special/g_sh_39_shield.png",
+    "tags": ["special", "shield"]
   }
 ]
