@@ -78,5 +78,11 @@
       "pen_medium",
       "two_handed"
     ]
+  },
+  {
+    "id": "las_16_trident",
+    "name": "LAS-16 Trident",
+    "icon": "img/Primary/Energy-Based/las_16_trident.png",
+    "tags": ["energy_based", "two_handed"]
   }
 ]
