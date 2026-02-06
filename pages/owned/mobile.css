@@ -1,0 +1,130 @@
+/* ===============================
+   OWNED ITEMS – MOBILE STYLES
+   =============================== */
+
+@media (max-width: 900px) {
+
+    /* --- Layout: keep Equipment / Stratagems side-by-side --- */
+    .results.loadout-grid {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .loadout-left,
+    .loadout-right {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+        /* --- Center column headers --- */
+        .loadout-left .slot-card > strong,
+        .loadout-right .slot-card > strong {
+            text-align: center;
+        }
+
+    /* ===============================
+     TOP CATEGORY BUBBLES
+     (Primary / Defensive / etc.)
+     =============================== */
+    .owned-category > strong,
+    .owned-subheader-top {
+        display: block;
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.15);
+        border-radius: 12px;
+        padding: 7px 10px;
+        margin: 12px 0 8px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        line-height: 1.1;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* ===============================
+     SUBTYPE HEADERS
+     (Assault Rifle / Emplacements)
+     NO outer card, just a light pill
+     =============================== */
+    .owned-type-card {
+        background: transparent;
+        border: none;
+        padding: 0;
+        margin-bottom: 14px;
+    }
+
+    .owned-type-title {
+        background: rgba(255,255,255,.05);
+        border: 1px solid rgba(255,255,255,.12);
+        border-radius: 10px;
+        padding: 6px 10px;
+        margin: 8px 0;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.1;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* ===============================
+     ITEM GRID + ITEM CARDS
+     =============================== */
+    .owned-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .owned-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 8px;
+        border-radius: 12px;
+        background: linear-gradient(145deg, #0f1520, #0b0f17);
+        border: 1px solid rgba(180,200,235,0.18);
+        overflow: hidden;
+        min-width: 0;
+    }
+
+        /* Checkbox stays top-left */
+        .owned-card > input[type="checkbox"] {
+            align-self: flex-start;
+            margin: 0;
+        }
+
+        /* Icon sizing (locked so it never spills) */
+        .owned-card .owned-icon,
+        .owned-card img.owned-icon {
+            width: 85px;
+            height: 85px;
+            flex: 0 0 85px;
+            object-fit: contain;
+        }
+
+        /* ===============================
+     ITEM NAME (UNDER ICON)
+     =============================== */
+        .owned-card .owned-name {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* ← change to 3 if desired */
+
+            overflow: hidden;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.12;
+            font-weight: 650;
+            color: var(--yellow);
+            overflow-wrap: anywhere;
+        }
+}

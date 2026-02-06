@@ -1,0 +1,32 @@
+[
+  {
+    "id": "m_102_fast_recon_vehicle",
+    "name": "M-102 Fast Recon Vehicle",
+    "icon": "img/Stratagems/Supply/Vehicles/m_102_fast_recon_vehicle.png",
+    "tags": [
+      "supply",
+      "vehicle"
+    ],
+    "cooldown_sec": 480
+  },
+  {
+    "id": "exo_45_patriot_exosuit",
+    "name": "EXO-45 Patriot Exosuit",
+    "icon": "img/Stratagems/Supply/Vehicles/exo_45_patriot_exosuit.png",
+    "tags": [
+      "supply",
+      "vehicle"
+    ],
+    "cooldown_sec": 600
+  },
+  {
+    "id": "exo_49_emancipator_exosuit",
+    "name": "EXO-49 Emancipator Exosuit",
+    "icon": "img/Stratagems/Supply/Vehicles/exo_49_emancipator_exosuit.png",
+    "tags": [
+      "supply",
+      "vehicle"
+    ],
+    "cooldown_sec": 600
+  }
+]

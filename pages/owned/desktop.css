@@ -1,0 +1,116 @@
+/* ===============================
+   OWNED – DESKTOP
+   =============================== */
+
+/* Layout: two columns */
+.results.loadout-grid{
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.loadout-left,
+.loadout-right {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+/* Center the column headers (Equipment / Stratagems) */
+.loadout-left .slot-card > strong,
+.loadout-right .slot-card > strong{
+    text-align: center;
+}
+
+/* ===============================
+   TOP CATEGORY HEADERS
+   Primary / Defensive / Supply
+   =============================== */
+.owned-subheader-top {
+    display: block;
+    color: #e8eef8;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 12px;
+    padding: 8px 12px;
+    margin: 18px 0 12px;
+}
+
+/* Make Primary/Secondary/Throwable match Defensive/Offensive/Supply */
+.owned-category > strong{
+    display: block;
+    color: #e8eef8;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 12px;
+    padding: 8px 12px;
+    margin: 18px 0 12px;
+}
+
+/* ===============================
+   TYPE CARDS
+   Assault Rifle, Emplacements, etc
+   =============================== */
+.owned-type-card {
+    margin-bottom: 18px;
+}
+
+/* White bubble header */
+.owned-type-title {
+    color: #e8eef8;
+    font-weight: 700;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 12px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+}
+
+/* Grid remains unchanged */
+.owned-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+}
+/* ======================================================
+   OWNED PAGE — FORCE ITEM TEXT YELLOW (DESKTOP)
+   ====================================================== */
+@media (min-width: 769px) {
+
+    /* Make any “owned list” text yellow.
+     This targets the common patterns: list items, labels, spans, and links inside the owned UI. */
+    .owned-page li,
+    .owned-page label,
+    .owned-page span,
+    .owned-page a,
+    .owned-page .item-name,
+    .owned-page .item-title,
+    .owned-page .item-label {
+        color: var(--yellow, #ffd800) !important;
+        font-weight: 400 !important;
+    }
+}
+
+/* ======================================================
+   FIX — OWNED PAGE ITEM NAME COLOR + WEIGHT (DESKTOP)
+   The owned page uses .owned-name for BOTH equipment + stratagem items.
+   Without this, names inherit default text color (white).
+   ====================================================== */
+.owned-item-card .owned-name,
+.owned-name {
+  color: var(--yellow, #ffd800) !important;
+  font-weight: 400 !important; /* match random page item weight */
+  font-family: inherit !important;
+}
+
+/* If the name is wrapped in a link on owned page, keep it yellow too */
+.owned-item-card a,
+.owned-item-card a .owned-name {
+  color: var(--yellow, #ffd800) !important;
+  text-decoration: none;
+}

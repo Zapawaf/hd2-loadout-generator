@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Owned Items — HD2 Loadout Generator</title>
+
+  <link rel="stylesheet" href="/pages/_shared/shared.css"/>
+  <link rel="stylesheet" href="/pages/_shared/sidebar.css"/>
+
+  <!-- Desktop-only -->
+  <link rel="stylesheet" href="/pages/owned/desktop.css" media="(min-width: 901px)">
+  <!-- Mobile-only -->
+  <link rel="stylesheet" href="/pages/owned/mobile.css" media="(max-width: 900px)">
+</head>
+<body>
+
+<div id="pageContent">
+  <h1>Owned Items</h1>
+
+  <p class="wip-disclaimer">
+    Choose what you own. The randomizer will only roll from owned items.
+    By default, everything is treated as owned until you uncheck items here.
+  </p>
+
+  <div class="controls">
+    <button id="ownedSelectAll">Select All</button>
+    <button id="ownedSelectNone">Select None</button>
+    <input id="ownedSearch" type="text" placeholder="Search items…" style="min-width: 220px;" />
+  </div>
+
+  <div id="ownedStatus" class="status">Loading…</div>
+
+  <div class="results loadout-grid">
+    <div class="loadout-left">
+      <div class="slot-card">
+        <strong>Equipment</strong>
+
+        <div class="owned-category">
+          <strong>Primary</strong>
+          <div id="ownedPrimaries" class="owned-list"></div>
+        </div>
+
+        <div class="owned-category">
+          <strong>Secondary</strong>
+          <div id="ownedSecondaries" class="owned-list"></div>
+        </div>
+
+        <div class="owned-category">
+          <strong>Throwable</strong>
+          <div id="ownedGrenades" class="owned-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loadout-right">
+      <div class="slot-card">
+        <strong>Stratagems</strong>
+
+        <div class="owned-category">
+          <strong>Defensive</strong>
+          <div id="ownedDefensive" class="owned-list"></div>
+        </div>
+
+        <div class="owned-category">
+          <strong>Offensive</strong>
+          <div id="ownedOffensive" class="owned-list"></div>
+        </div>
+
+        <div class="owned-category">
+          <strong>Supply</strong>
+          <div id="ownedSupply" class="owned-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/pages/_shared/sidebar.js"></script>
+<script src="/pages/owned/owned.js"></script>
+</body>
+</html>
