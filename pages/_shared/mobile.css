@@ -1,0 +1,35 @@
+
+/* ======================================================
+   MOBILE SIDEBAR — SLIDE-IN DRAWER (OVERLAY)
+   ====================================================== */
+@media (max-width: 600px) {
+
+  .sidebar {
+    position: fixed;
+    top: 76px; /* below header/title */
+    left: 12px;
+    width: min(78vw, 280px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+
+    transform: translateX(-120%);
+    transition: transform 180ms ease;
+    z-index: 1200;
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1100;
+  }
+
+  .sidebar-backdrop.is-open {
+    display: block;
+  }
+}
