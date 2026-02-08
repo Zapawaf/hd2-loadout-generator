@@ -28,5 +28,17 @@
       "vehicle"
     ],
     "cooldown_sec": 600
+  },
+  {
+    "id": "td_220_bastion_mk_xvi",
+    "name": "TD-220 Bastion MK XVI",
+    "category": "supply",
+    "sub_category": "vehicle",
+    "icon": "img/Stratagems/Supply/Vehicles/td_220_bastion_mk_xvi.png",
+    "tags": [
+      "supply",
+      "vehicle"
+    ],
+    "cooldown_sec": 780
   }
 ]
