@@ -285,5 +285,18 @@
       "support_weapon"
     ],
     "cooldown_sec": 120
+  },
+  {
+    "id": "eat_700_expendable_napalm",
+    "name": "EAT-700 Expendable Napalm",
+    "category": "supply",
+    "sub_category": "weapon",
+    "icon": "img/Stratagems/Supply/Weapons/eat_700_expendable_napalm.png",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "expendable"
+    ]
   }
+
 ]
