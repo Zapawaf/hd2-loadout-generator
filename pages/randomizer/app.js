@@ -27,6 +27,7 @@ const CONFIG = {
     STRATAGEM_COUNT: 4,
     MAX_BACKPACK_STRATS: 1,         // "uses_backpack_slot"
     MAX_SUPPORT_WEAPON_STRATS: 1,   // "support_weapon"
+    MAX_SUPPLY_STRATS: 2,           // prevents 3 - 4 blue stratagem loadouts
 
     // Validity requirements
     REQUIRE_AT_LEAST_ONE_SUPPORT_WEAPON: true, // support_weapon => damage-capable
@@ -377,9 +378,31 @@ function renderLoadout({ primary, secondary, grenade, stratagems }, note = "") {
     const ul = $("stratagemList");
     ul.innerHTML = "";
 
-    const sortedStratagems = [...(stratagems || [])].sort((a, b) =>
-        (a?.name || "").localeCompare(b?.name || "")
-    );
+    const sortedStratagems = [...(stratagems || [])].sort((a, b) => {
+        // tier order: support_weapon > other supply > defensive > offensive
+        const tier = (s) => {
+            const isSupport = hasTag(s, "support_weapon");
+            const isSupply = hasTag(s, "supply");
+            const isDef = hasTag(s, "defensive");
+            const isOff = hasTag(s, "offensive");
+
+            if (isSupport) return 0;
+            if (isSupply) return 1;
+            if (isDef) return 2;
+            if (isOff) return 3;
+
+            // unknown / untagged goes last
+            return 99;
+        };
+
+        const ta = tier(a);
+        const tb = tier(b);
+        if (ta !== tb) return ta - tb;
+
+        // same tier -> sort by name
+        return (a?.name || "").localeCompare(b?.name || "");
+    });
+
 
     for (const s of sortedStratagems) {
         const li = document.createElement("li");
@@ -412,20 +435,25 @@ function renderLoadout({ primary, secondary, grenade, stratagems }, note = "") {
 // ============================================================
 
 function pickStratagemsWithRules(excludedSets) {
-    const pool = [...state.stratagems].filter(s => isOwned("stratagems", s, excludedSets)); // copy so we can splice
+    const pool = [...state.stratagems].filter(s => isOwned("stratagems", s, excludedSets));
     const picked = [];
 
     let backpackCount = 0;
     let supportWeaponCount = 0;
+    let supplyCount = 0; // <-- ADD THIS
 
     while (picked.length < CONFIG.STRATAGEM_COUNT) {
-        if (pool.length === 0) return null; // ran out of options
+        if (pool.length === 0) return null;
 
         const idx = Math.floor(Math.random() * pool.length);
-        const candidate = pool.splice(idx, 1)[0]; // removes -> no duplicates
+        const candidate = pool.splice(idx, 1)[0];
 
         const usesBackpack = hasTag(candidate, "uses_backpack_slot");
         const isSupportWeapon = hasTag(candidate, "support_weapon");
+        const isSupply = hasTag(candidate, "supply"); // <-- ADD THIS (uses your existing category tags)
+
+        // NEW RULE: Max 2 Supply stratagems total
+        if (isSupply && supplyCount >= CONFIG.MAX_SUPPLY_STRATS) continue;
 
         // Rule: Max backpack stratagems
         if (usesBackpack && backpackCount >= CONFIG.MAX_BACKPACK_STRATS) continue;
@@ -437,6 +465,7 @@ function pickStratagemsWithRules(excludedSets) {
 
         if (usesBackpack) backpackCount++;
         if (isSupportWeapon) supportWeaponCount++;
+        if (isSupply) supplyCount++; // <-- ADD THIS
     }
 
     // Rule: Must have at least one support weapon (support_weapon implies damage)
@@ -500,8 +529,8 @@ function generateLoadout() {
         if (!result) continue;
 
         const note = result.requiresOneHanded
-            ? "Loadout generated (one-handed primary required)."
-            : "Loadout generated.";
+            ? "one-handed primary required"
+            : "";
 
         renderLoadout(result, note);
         return;
