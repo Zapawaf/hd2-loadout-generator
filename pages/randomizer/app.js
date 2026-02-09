@@ -26,7 +26,8 @@ const CONFIG = {
     // Stratagem slot rules
     STRATAGEM_COUNT: 4,
     MAX_BACKPACK_STRATS: 1,         // "uses_backpack_slot"
-    MAX_SUPPORT_WEAPON_STRATS: 1,   // "support_weapon"
+    MAX_CARRIED_SUPPORT_WEAPON_STRATS: 1,     // support_weapon && !expendable
+    MAX_EXPENDABLE_SUPPORT_WEAPON_STRATS: 2,  // support_weapon && expendable
     MAX_SUPPLY_STRATS: 2,           // prevents 3 - 4 blue stratagem loadouts
 
     // Validity requirements
@@ -435,37 +436,50 @@ function renderLoadout({ primary, secondary, grenade, stratagems }, note = "") {
 // ============================================================
 
 function pickStratagemsWithRules(excludedSets) {
-    const pool = [...state.stratagems].filter(s => isOwned("stratagems", s, excludedSets));
+    const pool = [...state.stratagems].filter(s => isOwned("stratagems", s, excludedSets)); // copy so we can splice
     const picked = [];
 
     let backpackCount = 0;
-    let supportWeaponCount = 0;
-    let supplyCount = 0; // <-- ADD THIS
+    let supplyCount = 0;
+
+    // Support weapon split:
+    // - carried support weapons: support_weapon && !expendable  (max 1)
+    // - expendable support weapons: support_weapon && expendable (max 2)
+    let carriedSupportCount = 0;
+    let expendableSupportCount = 0;
 
     while (picked.length < CONFIG.STRATAGEM_COUNT) {
-        if (pool.length === 0) return null;
+        if (pool.length === 0) return null; // ran out of options
 
         const idx = Math.floor(Math.random() * pool.length);
-        const candidate = pool.splice(idx, 1)[0];
+        const candidate = pool.splice(idx, 1)[0]; // removes -> no duplicates
 
         const usesBackpack = hasTag(candidate, "uses_backpack_slot");
         const isSupportWeapon = hasTag(candidate, "support_weapon");
-        const isSupply = hasTag(candidate, "supply"); // <-- ADD THIS (uses your existing category tags)
+        const isExpendable = hasTag(candidate, "expendable");
+        const isSupply = hasTag(candidate, "supply");
 
-        // NEW RULE: Max 2 Supply stratagems total
+        const isCarriedSupportWeapon = isSupportWeapon && !isExpendable;
+        const isExpendableSupportWeapon = isSupportWeapon && isExpendable;
+
+        // Rule: Max 2 Supply stratagems total (prevents 3–4 blue loadouts)
         if (isSupply && supplyCount >= CONFIG.MAX_SUPPLY_STRATS) continue;
 
         // Rule: Max backpack stratagems
         if (usesBackpack && backpackCount >= CONFIG.MAX_BACKPACK_STRATS) continue;
 
-        // Rule: Max support weapon stratagems
-        if (isSupportWeapon && supportWeaponCount >= CONFIG.MAX_SUPPORT_WEAPON_STRATS) continue;
+        // Rule: Max carried support weapons (the "real" support weapon slot)
+        if (isCarriedSupportWeapon && carriedSupportCount >= 1) continue;
+
+        // Rule: Allow up to 2 expendable support weapons
+        if (isExpendableSupportWeapon && expendableSupportCount >= 2) continue;
 
         picked.push(candidate);
 
         if (usesBackpack) backpackCount++;
-        if (isSupportWeapon) supportWeaponCount++;
-        if (isSupply) supplyCount++; // <-- ADD THIS
+        if (isSupply) supplyCount++;
+        if (isCarriedSupportWeapon) carriedSupportCount++;
+        if (isExpendableSupportWeapon) expendableSupportCount++;
     }
 
     // Rule: Must have at least one support weapon (support_weapon implies damage)
@@ -484,6 +498,7 @@ function pickStratagemsWithRules(excludedSets) {
 
     return picked;
 }
+
 
 // ============================================================
 // SECTION 9 — LOADOUT GENERATION (WEAPONS + CONSTRAINTS)
