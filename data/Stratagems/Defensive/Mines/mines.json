@@ -5,9 +5,13 @@
     "icon": "img/Stratagems/Defensive/Mines/md_6_anti_personnel_minefield.png",
     "tags": [
       "defensive",
-      "mine"
+      "mine",
+      "explosive",
+      "horde_control",
+      "medium_pen"
     ],
-    "cooldown_sec": 120
+    "call_in_sec": 4.75,
+    "cooldown_sec": 102.6
   },
   {
     "id": "md_i4_incendiary_mines",
@@ -15,9 +19,14 @@
     "icon": "img/Stratagems/Defensive/Mines/md_i4_incendiary_mines.png",
     "tags": [
       "defensive",
-      "mine"
+      "mine",
+      "horde_control",
+      "explosive",
+      "incendiary",
+      "medium_pen"
     ],
-    "cooldown_sec": 120
+    "call_in_sec": 4.75,
+    "cooldown_sec": 102.6
   },
   {
     "id": "md_17_anti_tank_mines",
@@ -25,9 +34,13 @@
     "icon": "img/Stratagems/Defensive/Mines/md_17_anti_tank_mines.png",
     "tags": [
       "defensive",
-      "mine"
+      "mine",
+      "horde_control",
+      "explosive",
+      "anti_tank"
     ],
-    "cooldown_sec": 120
+    "call_in_sec": 4.75,
+    "cooldown_sec": 102.6
   },
   {
     "id": "md_8_gas_mines",
@@ -35,8 +48,12 @@
     "icon": "img/Stratagems/Defensive/Mines/md_8_gas_mines.png",
     "tags": [
       "defensive",
-      "mine"
+      "mine",
+      "horde_control",
+      "explosive",
+      "gas"
     ],
-    "cooldown_sec": 120
+    "call_in_sec": 4.75,
+    "cooldown_sec": 102.6
   }
 ]

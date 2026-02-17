@@ -5,7 +5,7 @@
     "icon": "img/Primary/Special/vg_70_variable.png",
     "tags": [
       "special",
-      "pen_light",
+      "light_pen",
       "two_handed"
     ]
   },
@@ -15,8 +15,9 @@
     "icon": "img/Primary/Special/flam_66_torcher.png",
     "tags": [
       "special",
-      "pen_heavy",
-      "two_handed"
+      "heavy_pen",
+      "two_handed",
+      "incendiary"
     ]
   },
   {
@@ -25,7 +26,7 @@
     "icon": "img/Primary/Special/jar_5_dominator.png",
     "tags": [
       "special",
-      "pen_medium",
+      "medium_pen",
       "two_handed"
     ]
   }

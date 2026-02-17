@@ -49,7 +49,12 @@
         font-weight: 700;
         line-height: 1.15;
         margin-bottom: 12px;
-    }
+    
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
 
 
 /* ======================================================
@@ -206,4 +211,35 @@
         color: var(--yellow) !important;
         font-weight: 400 !important;
     }
+}
+
+
+/* Center Equipment / Stratagems headers on desktop */
+.group-title{ text-align:center; }
+
+/* Equipment only: make Primary / Secondary / Throwable white */
+.loadout-left .slot-card > strong,
+#equipmentColumn .slot-card > strong,
+#equipment .slot-card > strong {
+    color: #fff !important;
+}
+
+/* Center the STRATAGEMS header (right column) like EQUIPMENT */
+.loadout-right .group-title,
+.loadout-right > .group-title {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important; /* helps if parent is flex */
+}
+
+/* Fallback if the header is a <strong> (some layouts use this) */
+.loadout-right .slot-card > strong,
+.loadout-right .loadout-group > strong {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    align-self: center !important;
 }

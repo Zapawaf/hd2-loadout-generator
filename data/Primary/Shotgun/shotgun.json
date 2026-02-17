@@ -5,8 +5,9 @@
     "icon": "img/Primary/Shotgun/sg_8_punisher.png",
     "tags": [
       "shotgun",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "rounds_reload"
     ]
   },
   {
@@ -15,8 +16,9 @@
     "icon": "img/Primary/Shotgun/sg_8s_slugger.png",
     "tags": [
       "shotgun",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "two_handed",
+      "rounds_reload"
     ]
   },
   {
@@ -25,8 +27,11 @@
     "icon": "img/Primary/Shotgun/sg_20_halt.png",
     "tags": [
       "shotgun",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "medium_pen",
+      "two_handed",
+      "rounds_reload",
+      "stun"
     ]
   },
   {
@@ -35,8 +40,10 @@
     "icon": "img/Primary/Shotgun/sg_451_cookout.png",
     "tags": [
       "shotgun",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "incendiary",
+      "rounds_reload"
     ]
   },
   {
@@ -45,8 +52,9 @@
     "icon": "img/Primary/Shotgun/dbs_2_double_freedom.png",
     "tags": [
       "shotgun",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "two_handed",
+      "rounds_reload"
     ]
   },
   {
@@ -55,8 +63,9 @@
     "icon": "img/Primary/Shotgun/m90a_shotgun.png",
     "tags": [
       "shotgun",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "rounds_reload"
     ]
   },
   {
@@ -65,8 +74,9 @@
     "icon": "img/Primary/Shotgun/sg_225_breaker.png",
     "tags": [
       "shotgun",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "rounds_reload"
     ]
   },
   {
@@ -75,8 +85,9 @@
     "icon": "img/Primary/Shotgun/sg_225sp_breaker_spray_pray.png",
     "tags": [
       "shotgun",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "rounds_reload"
     ]
   },
   {
@@ -85,8 +96,10 @@
     "icon": "img/Primary/Shotgun/sg_225ie_breaker_incendiary.png",
     "tags": [
       "shotgun",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "rounds_reload",
+      "incendiary"
     ]
   }
 ]

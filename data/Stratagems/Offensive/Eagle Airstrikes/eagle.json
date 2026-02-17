@@ -5,9 +5,15 @@
     "icon": "img/Stratagems/Offensive/Eagle Airstrikes/eagle_strafing_run.png",
     "tags": [
       "offensive",
-      "eagle"
+      "eagle",
+      "heavy_pen",
+      "demo",
+      "explosive",
+      "bug_hole"
     ],
-    "cooldown_sec": 8
+    "call_in_sec": 2.4,
+    "uses": 5,
+    "cooldown_between_uses_sec": 6.75
   },
   {
     "id": "eagle_airstrike",
@@ -15,9 +21,16 @@
     "icon": "img/Stratagems/Offensive/Eagle Airstrikes/eagle_airstrike.png",
     "tags": [
       "offensive",
-      "eagle"
+      "eagle",
+      "anti_tank",
+      "explosive",
+      "demo",
+      "bug_hole"
     ],
-    "cooldown_sec": 8
+    "call_in_sec": 4.1,
+    "uses": 3,
+    "cooldown_between_uses_sec": 7
+    
   },
   {
     "id": "eagle_cluster_bomb",
@@ -25,9 +38,16 @@
     "icon": "img/Stratagems/Offensive/Eagle Airstrikes/eagle_cluster_bomb.png",
     "tags": [
       "offensive",
-      "eagle"
+      "eagle",
+      "medium_pen",
+      "explosive",
+      "demo",
+      "bug_hole",
+      "horde_control"
     ],
-    "cooldown_sec": 8
+    "call_in_sec": 4.1,
+    "uses": 5,
+    "cooldown_between_uses_sec": 6.75
   },
   {
     "id": "eagle_napalm_airstrike",
@@ -35,9 +55,14 @@
     "icon": "img/Stratagems/Offensive/Eagle Airstrikes/eagle_napalm_airstrike.png",
     "tags": [
       "offensive",
-      "eagle"
+      "eagle",
+      "incendiary",
+      "explosive",
+      "horde_control"
     ],
-    "cooldown_sec": 8
+    "call_in_sec": 4.1,
+    "uses": 3,
+    "cooldown_between_uses_sec": 6.75
   },
   {
     "id": "eagle_smoke_strike",
@@ -45,9 +70,14 @@
     "icon": "img/Stratagems/Offensive/Eagle Airstrikes/eagle_smoke_strike.png",
     "tags": [
       "offensive",
-      "eagle"
+      "eagle",
+      "smoke",
+      "self_defense",
+      "stealth"
     ],
-    "cooldown_sec": 8
+    "call_in_sec": 2.4,
+    "uses": 5,
+    "cooldown_between_uses_sec": 8
   },
   {
     "id": "eagle_110mm_rocket_pods",
@@ -55,9 +85,14 @@
     "icon": "img/Stratagems/Offensive/Eagle Airstrikes/eagle_110mm_rocket_pods.png",
     "tags": [
       "offensive",
-      "eagle"
+      "eagle",
+      "anti_tank",
+      "explosive",
+      "guided"
     ],
-    "cooldown_sec": 8
+    "call_in_sec": 2.4,
+    "uses": 5,
+    "cooldown_between_uses_sec": 8
   },
   {
     "id": "eagle_500kg_bomb",
@@ -65,8 +100,15 @@
     "icon": "img/Stratagems/Offensive/Eagle Airstrikes/eagle_500kg_bomb.png",
     "tags": [
       "offensive",
-      "eagle"
+      "eagle",
+      "anti_tank",
+      "explosive",
+      "demo",
+      "bug_hole",
+      "horde_control"
     ],
-    "cooldown_sec": 8
+    "call_in_sec": 2.4,
+    "uses": 5,
+    "cooldown_between_uses_sec": 8
   }
 ]

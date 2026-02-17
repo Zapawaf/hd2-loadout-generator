@@ -5,8 +5,9 @@
     "icon": "img/Secondary/Melee/cqc_19_stun_lance.png",
     "tags": [
       "melee",
-      "pen_medium",
-      "one_handed"
+      "medium_pen",
+      "one_handed",
+      "stun"
     ]
   },
   {
@@ -15,7 +16,7 @@
     "icon": "img/Secondary/Melee/cqc_2_saber.png",
     "tags": [
       "melee",
-      "pen_medium",
+      "medium_pen",
       "one_handed"
     ]
   },
@@ -25,8 +26,9 @@
     "icon": "img/Secondary/Melee/cqc_30_stun_baton.png",
     "tags": [
       "melee",
-      "pen_medium",
-      "one_handed"
+      "medium_pen",
+      "one_handed",
+      "stun"
     ]
   },
   {
@@ -35,7 +37,7 @@
     "icon": "img/Secondary/Melee/cqc_5_combat_hatchet.png",
     "tags": [
       "melee",
-      "pen_medium",
+      "medium_pen",
       "one_handed"
     ]
   },
@@ -45,7 +47,7 @@
     "icon": "img/Secondary/Melee/cqc_42_machete.png",
     "tags": [
       "melee",
-      "pen_medium",
+      "medium_pen",
       "one_handed"
     ]
   }

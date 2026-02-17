@@ -5,9 +5,12 @@
     "icon": "img/Stratagems/Defensive/Sentries/a_mg_43_machine_gun_sentry.png",
     "tags": [
       "defensive",
-      "sentry"
+      "sentry",
+      "medium_pen",
+      "horde_control"
     ],
-    "cooldown_sec": 90
+    "call_in_sec": 4.75,
+    "cooldown_sec": 76.95
   },
   {
     "id": "a_g_16_gatling_sentry",
@@ -15,9 +18,12 @@
     "icon": "img/Stratagems/Defensive/Sentries/a_g_16_gatling_sentry.png",
     "tags": [
       "defensive",
-      "sentry"
+      "sentry",
+      "medium_pen",
+      "horde_control"
     ],
-    "cooldown_sec": 150
+    "call_in_sec": 4.75,
+    "cooldown_sec": 128.25
   },
   {
     "id": "a_m_12_mortar_sentry",
@@ -25,9 +31,13 @@
     "icon": "img/Stratagems/Defensive/Sentries/a_m_12_mortar_sentry.png",
     "tags": [
       "defensive",
-      "sentry"
+      "sentry",
+      "explosive",
+      "medium_pen",
+      "horde_control"
     ],
-    "cooldown_sec": 180
+    "call_in_sec": 4.75,
+    "cooldown_sec": 153.9
   },
   {
     "id": "a_m_23_ems_mortar_sentry",
@@ -35,9 +45,13 @@
     "icon": "img/Stratagems/Defensive/Sentries/a_m_23_ems_mortar_sentry.png",
     "tags": [
       "defensive",
-      "sentry"
+      "sentry",
+      "ems",
+      "stun",
+      "horde_control"
     ],
-    "cooldown_sec": 180
+    "call_in_sec": 4.75,
+    "cooldown_sec": 153.9
   },
   {
     "id": "a_ac_8_autocannon_sentry",
@@ -45,9 +59,13 @@
     "icon": "img/Stratagems/Defensive/Sentries/a_ac_8_autocannon_sentry.png",
     "tags": [
       "defensive",
-      "sentry"
+      "sentry",
+      "anti_tank",
+      "horde_control",
+      "explosive"
     ],
-    "cooldown_sec": 150
+    "call_in_sec": 4.75,
+    "cooldown_sec": 128.25
   },
   {
     "id": "a_mls_4x_rocket_sentry",
@@ -55,9 +73,14 @@
     "icon": "img/Stratagems/Defensive/Sentries/a_mls_4x_rocket_sentry.png",
     "tags": [
       "defensive",
-      "sentry"
+      "sentry",
+      "explosive",
+      "anti_tank",
+      "horde_control",
+      "guided"
     ],
-    "cooldown_sec": 150
+    "call_in_sec": 4.75,
+    "cooldown_sec": 128.25
   },
   {
     "id": "a_flam_40_flame_sentry",
@@ -65,9 +88,13 @@
     "icon": "img/Stratagems/Defensive/Sentries/a_flam_40_flame_sentry.png",
     "tags": [
       "defensive",
-      "sentry"
+      "sentry",
+      "incendiary",
+      "horde_control",
+      "medium_pen"
     ],
-    "cooldown_sec": 100
+    "call_in_sec": 4.75,
+    "cooldown_sec": 85.5
   },
   {
     "id": "a_las_98_laser_sentry",
@@ -75,8 +102,27 @@
     "icon": "img/Stratagems/Defensive/Sentries/a_las_98_laser_sentry.png",
     "tags": [
       "defensive",
-      "sentry"
+      "sentry",
+      "energy_based",
+      "heavy_pen",
+      "horde_control",
+      "beam"
     ],
-    "cooldown_sec": 150
+    "call_in_sec": 4.75,
+    "cooldown_sec": 128.25
+  },
+  {
+    "id": "a_arc_3_tesla_tower",
+    "name": "A/ARC-3 Tesla Tower",
+    "icon": "img/Stratagems/Defensive/Sentries/a_arc_3_tesla_tower.png",
+    "tags": [
+      "defensive",
+      "sentry",
+      "arc",
+      "horde_control",
+      "heavy_pen"
+    ],
+    "call_in_sec": 4.75,
+    "cooldown_sec": 102.6
   }
 ]

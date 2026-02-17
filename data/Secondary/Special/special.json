@@ -5,7 +5,9 @@
     "icon": "img/Secondary/Special/p_11_stim_pistol.png",
     "tags": [
       "special",
-      "one_handed"
+      "one_handed",
+      "medic",
+      "rounds_reload"
     ]
   },
   {
@@ -14,8 +16,9 @@
     "icon": "img/Secondary/Special/sg_22_bushwhacker.png",
     "tags": [
       "special",
-      "pen_light",
-      "one_handed"
+      "light_pen",
+      "one_handed",
+      "rounds_reload"
     ]
   },
   {
@@ -24,8 +27,10 @@
     "icon": "img/Secondary/Special/las_58_talon.png",
     "tags": [
       "special",
-      "pen_medium",
-      "one_handed"
+      "medium_pen",
+      "one_handed",
+      "energy_based",
+      "heat"
     ]
   },
   {
@@ -34,8 +39,9 @@
     "icon": "img/Secondary/Special/p_72_crisper.png",
     "tags": [
       "special",
-      "pen_heavy",
-      "one_handed"
+      "medium_pen",
+      "one_handed",
+      "incendiary"
     ]
   },
   {
@@ -44,8 +50,11 @@
     "icon": "img/Secondary/Special/gp_31_grenade_pistol.png",
     "tags": [
       "special",
-      "pen_medium",
-      "one_handed"
+      "medium_pen",
+      "one_handed",
+      "explosive",
+      "bug_hole",
+      "demo"
     ]
   },
   {
@@ -54,8 +63,11 @@
     "icon": "img/Secondary/Special/las_7_dagger.png",
     "tags": [
       "special",
-      "pen_light",
-      "one_handed"
+      "light_pen",
+      "one_handed",
+      "beam",
+      "heat",
+      "energy_based"
     ]
   },
   {
@@ -64,7 +76,11 @@
     "icon": "img/Secondary/Special/gp_20_ultimatum.png",
     "tags": [
       "special",
-      "one_handed"
+      "one_handed",
+      "anti_tank",
+      "demo",
+      "bug_hole",
+      "explosive"
     ]
   },
   {
@@ -73,8 +89,10 @@
     "icon": "img/Secondary/Special/plas_15_loyalist.png",
     "tags": [
       "special",
-      "pen_light",
-      "one_handed"
+      "medium_pen",
+      "one_handed",
+      "chargeup",
+      "explosive"
     ]
   },
   {
@@ -83,8 +101,10 @@
     "icon": "img/Secondary/Special/p_35_re_educator.png",
     "tags": [
       "special",
-      "pen_heavy",
-      "one_handed"
+      "heavy_pen",
+      "one_handed",
+      "gas",
+      "stealth"
     ]
   }
 ]

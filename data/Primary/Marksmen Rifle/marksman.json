@@ -5,7 +5,7 @@
     "icon": "img/Primary/Marksman/r_2_amendment.png",
     "tags": [
       "marksmen_rifle",
-      "pen_light",
+      "light_pen",
       "two_handed"
     ]
   },
@@ -15,8 +15,9 @@
     "icon": "img/Primary/Marksman/r_2124_constitution.png",
     "tags": [
       "marksmen_rifle",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "two_handed",
+      "rounds_reload"
     ]
   },
   {
@@ -25,8 +26,9 @@
     "icon": "img/Primary/Marksman/r_6_deadeye.png",
     "tags": [
       "marksmen_rifle",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "two_handed",
+      "rounds_reload"
     ]
   },
   {
@@ -35,7 +37,7 @@
     "icon": "img/Primary/Marksman/r_63_diligence.png",
     "tags": [
       "marksmen_rifle",
-      "pen_light",
+      "light_pen",
       "two_handed"
     ]
   },
@@ -45,7 +47,7 @@
     "icon": "img/Primary/Marksman/r_63cs_diligence_counter_sniper.png",
     "tags": [
       "marksmen_rifle",
-      "pen_medium",
+      "medium_pen",
       "two_handed"
     ]
   },
@@ -55,8 +57,9 @@
     "icon": "img/Primary/Marksman/r_72_censor.png",
     "tags": [
       "marksmen_rifle",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "stealth"
     ]
   }
 ]

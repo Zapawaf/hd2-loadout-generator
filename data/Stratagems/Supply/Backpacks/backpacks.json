@@ -6,9 +6,11 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "resupply"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "ax_ar_23_guard_dog",
@@ -17,9 +19,11 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "self_defense"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "ax_arc_3_guard_dog_k_9",
@@ -28,9 +32,13 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
-    ],
-    "cooldown_sec": 480
+      "uses_backpack_slot",
+      "self_defense",
+      "arc",
+      "stun"
+    ],    
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "ax_flam_75_guard_dog_hot_dog",
@@ -39,9 +47,12 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "self_defense",
+      "incendiary"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "ax_las_5_guard_dog_rover",
@@ -50,9 +61,12 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "self_defense",
+      "energy_based"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "ax_tx_13_guard_dog_dog_breath",
@@ -61,9 +75,12 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "self_defense",
+      "gas"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "b_100_portable_hellbomb",
@@ -72,9 +89,14 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "anti_tank",
+      "explosive",
+      "demo",
+      "bug_hole"
     ],
-    "cooldown_sec": 300
+    "call_in_sec": 9.75,
+    "cooldown_sec": 256.5
   },
   {
     "id": "b_md_c4_pack",
@@ -84,10 +106,14 @@
       "supply",
       "backpack",
       "uses_backpack_slot",
-      "support_weapon"
-
+      "support_weapon",
+      "anti_tank",
+      "explosive",
+      "demo",
+      "bug_hole"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "lift_182_warp_pack",
@@ -96,9 +122,11 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
-    ],
-    "cooldown_sec": 480
+      "uses_backpack_slot",
+      "mobility"
+    ],    
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "lift_850_jump_pack",
@@ -107,9 +135,11 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
-    ],
-    "cooldown_sec": 480
+      "uses_backpack_slot",
+      "mobility"
+    ],    
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "lift_860_hover_pack",
@@ -118,9 +148,11 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
-    ],
-    "cooldown_sec": 480
+      "uses_backpack_slot",
+      "mobility"
+    ],    
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "sh_20_ballistic_shield_backpack",
@@ -130,9 +162,12 @@
       "supply",
       "backpack",
       "uses_backpack_slot",
-      "requires_one_handed_primary"
-    ],
-    "cooldown_sec": 300
+      "requires_one_handed_primary",
+      "self_defense",
+      "shield"
+    ],    
+    "call_in_sec": 9.75,
+    "cooldown_sec": 205.2
   },
   {
     "id": "sh_32_shield_generator_pack",
@@ -141,9 +176,12 @@
     "tags": [
       "supply",
       "backpack",
-      "uses_backpack_slot"
-    ],
-    "cooldown_sec": 480
+      "uses_backpack_slot",
+      "self_defense",
+      "shield"
+    ],    
+    "call_in_sec": 9.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "sh_51_directional_shield",
@@ -153,8 +191,11 @@
       "supply",
       "backpack",
       "uses_backpack_slot",
-      "requires_one_handed_primary"
-    ],
-    "cooldown_sec": 300
+      "requires_one_handed_primary",
+      "self_defense",
+      "shield"
+    ],    
+    "call_in_sec": 9.75,
+    "cooldown_sec": 256.5
   }
 ]

@@ -27,9 +27,11 @@ import { getProfile } from "./profiles/index.js";
 const CONFIG = {
     // Stratagem slot rules
     STRATAGEM_COUNT: 4,
-    MAX_BACKPACK_STRATS: 1,         // "uses_backpack_slot"
+    MAX_BACKPACK_STRATS: 1,         // "uses_backpack_slot" hellbomb is treated as expendable and ignores this
     MAX_CARRIED_SUPPORT_WEAPON_STRATS: 1,     // support_weapon && !expendable
     MAX_EXPENDABLE_SUPPORT_WEAPON_STRATS: 2,  // support_weapon && expendable
+    ALLOW_EXPENDABLE_AS_GUARANTEED_SUPPORT: false, // if true, expendables may satisfy the required support slot
+    IGNORE_BACKPACK_LIMIT_FOR_EXPENDABLES: true, // if true, expendables bypass backpack slot limit
     MAX_SUPPLY_STRATS: 2,           // prevents 3 - 4 blue stratagem loadouts
     EAGLE_REARM_SEC: 108,          // assumed maxed ship modules
 
@@ -111,91 +113,17 @@ function getMicroMultiplier(item, profile) {
     let m = 1.0;
 
     const micro = profile?.micro || {};
+    const tagWeights = micro.tag || {};
 
-    // Backward-compatible global weights
-    const globalTagWeights = micro.tag || {}; // { tagName: weight }
-    const globalIdWeights = micro.id || {};   // { itemId: weight }
-
-    // New scoped weights
-    const pools = micro.pools || {};
-
-    // Map item._kind to pool keys used in micro.pools
-    const kind = item?._kind;
-    const poolKey =
-        kind === "primary" ? "primaries" :
-        kind === "secondary" ? "secondaries" :
-        kind === "throwable" ? "throwables" :
-        kind === "stratagem" ? "stratagems" :
-        null;
-
-    // Build candidate category keys (most granular first)
-    const categoryKeys = [];
-    if (kind === "primary" || kind === "secondary" || kind === "throwable") {
-        // Equipment subcategory names (e.g., "Assault Rifle", "Shotgun", "Special")
-        if (item?._equipmentSub) categoryKeys.push(String(item._equipmentSub));
-    } else if (kind === "stratagem") {
-        // Stratagem keys checked in order: "Top/Sub", then "Sub", then "Top"
-        if (item?._stratTop && item?._stratSub) categoryKeys.push(`${item._stratTop}/${item._stratSub}`);
-        if (item?._stratSub) categoryKeys.push(String(item._stratSub));
-        if (item?._stratTop) categoryKeys.push(String(item._stratTop));
-    }
-
-    function getScopedTagWeight(tag) {
-        // 1) Pool + category/subcategory (most granular)
-        if (poolKey && pools?.[poolKey]?.categories && categoryKeys.length) {
-            const cats = pools[poolKey].categories;
-            for (const ck of categoryKeys) {
-                const w = cats?.[ck]?.tag?.[tag];
-                if (typeof w === "number") return w;
-            }
-        }
-
-        // 2) Pool-wide (applies to entire pool)
-        if (poolKey) {
-            const w = pools?.[poolKey]?.tag?.[tag];
-            if (typeof w === "number") return w;
-        }
-
-        // 3) Global fallback
-        const gw = globalTagWeights?.[tag];
-        if (typeof gw === "number") return gw;
-
-        return 1.0;
-    }
-
-    function getScopedIdWeight(id) {
-        // 1) Pool + category/subcategory (most granular)
-        if (poolKey && pools?.[poolKey]?.categories && categoryKeys.length) {
-            const cats = pools[poolKey].categories;
-            for (const ck of categoryKeys) {
-                const w = cats?.[ck]?.id?.[id];
-                if (typeof w === "number") return w;
-            }
-        }
-
-        // 2) Pool-wide (applies to entire pool)
-        if (poolKey) {
-            const w = pools?.[poolKey]?.id?.[id];
-            if (typeof w === "number") return w;
-        }
-
-        // 3) Global fallback
-        const gw = globalIdWeights?.[id];
-        if (typeof gw === "number") return gw;
-
-        return 1.0;
-    }
-
-    // Tag multiplier
     const tags = item?.tags || [];
     for (const t of tags) {
-        m *= getScopedTagWeight(t);
+        const w = tagWeights[t];
+        if (typeof w === "number") m *= w;
     }
 
-    // Per-ID multiplier (scoped)
-    if (item?.id) {
-        m *= getScopedIdWeight(item.id);
-    }
+    const idWeights = micro.id || {};
+    const iw = idWeights[item?.id];
+    if (typeof iw === "number") m *= iw;
 
     return Number.isFinite(m) ? m : 1.0;
 }
@@ -749,9 +677,9 @@ function pickStratagemsWithRules(profile, excludedSets) {
         const isExpendableSupportWeapon = isSupportWeapon && isExpendable;
 
         if (isSupply && supplyCount >= CONFIG.MAX_SUPPLY_STRATS) return true;
-        if (usesBackpack && backpackCount >= CONFIG.MAX_BACKPACK_STRATS) return true;
-        if (isCarriedSupportWeapon && carriedSupportCount >= 1) return true;
-        if (isExpendableSupportWeapon && expendableSupportCount >= 2) return true;
+        if (usesBackpack && backpackCount >= CONFIG.MAX_BACKPACK_STRATS && !(isExpendable && CONFIG.IGNORE_BACKPACK_LIMIT_FOR_EXPENDABLES)) return true;
+        if (isCarriedSupportWeapon && carriedSupportCount >= CONFIG.MAX_CARRIED_SUPPORT_WEAPON_STRATS) return true;
+        if (isExpendableSupportWeapon && expendableSupportCount >= CONFIG.MAX_EXPENDABLE_SUPPORT_WEAPON_STRATS) return true;
 
         return false;
     }
@@ -765,7 +693,7 @@ function pickStratagemsWithRules(profile, excludedSets) {
         const isCarriedSupportWeapon = isSupportWeapon && !isExpendable;
         const isExpendableSupportWeapon = isSupportWeapon && isExpendable;
 
-        if (usesBackpack) backpackCount++;
+        if (usesBackpack && !(isExpendable && CONFIG.IGNORE_BACKPACK_LIMIT_FOR_EXPENDABLES)) backpackCount++;
         if (isSupply) supplyCount++;
         if (isCarriedSupportWeapon) carriedSupportCount++;
         if (isExpendableSupportWeapon) expendableSupportCount++;
@@ -786,20 +714,24 @@ function pickStratagemsWithRules(profile, excludedSets) {
 
     if (useEvenTop) {
         // Force one support weapon first so "visible Slot 1" is always support after display-sort.
-        let supportPick = pickFromPoolFiltered(it =>
-            hasTag(it, "support_weapon") &&
-            !hasTag(it, "expendable") &&
-            !wouldViolateRules(it)
-        );
+        let supportPick = null;
 
-        if (!supportPick) {
-            supportPick = pickFromPoolFiltered(it =>
-                hasTag(it, "support_weapon") &&
-                !wouldViolateRules(it)
-            );
-        }
+if (CONFIG.ALLOW_EXPENDABLE_AS_GUARANTEED_SUPPORT) {
+    // Expendables may satisfy the required support slot
+    supportPick = pickFromPoolFiltered(it =>
+        hasTag(it, "support_weapon") &&
+        !wouldViolateRules(it)
+    );
+} else {
+    // Default: require a carried support weapon for the required support slot
+    supportPick = pickFromPoolFiltered(it =>
+        hasTag(it, "support_weapon") &&
+        !hasTag(it, "expendable") &&
+        !wouldViolateRules(it)
+    );
+}
 
-        if (!supportPick) return null;
+if (!supportPick) return null;
 
         picked.push(supportPick);
         applyCounters(supportPick);
@@ -812,14 +744,14 @@ function pickStratagemsWithRules(profile, excludedSets) {
             // Try desired top-type first (exclude extra support weapons)
             let next = pickFromPoolFiltered(it =>
                 it?._stratTop === desiredTop &&
-                !hasTag(it, "support_weapon") &&
+                !(hasTag(it, "support_weapon") && !hasTag(it, "expendable")) &&
                 !wouldViolateRules(it)
             );
 
             // Fallback: any eligible non-support stratagem
             if (!next) {
                 next = pickFromPoolFiltered(it =>
-                    !hasTag(it, "support_weapon") &&
+                    !(hasTag(it, "support_weapon") && !hasTag(it, "expendable")) &&
                     !wouldViolateRules(it)
                 );
             }
@@ -863,7 +795,7 @@ function pickStratagemsWithRules(profile, excludedSets) {
 
         picked.push(candidate);
 
-        if (usesBackpack) backpackCount++;
+        if (usesBackpack && !(isExpendable && CONFIG.IGNORE_BACKPACK_LIMIT_FOR_EXPENDABLES)) backpackCount++;
         if (isSupply) supplyCount++;
         if (isCarriedSupportWeapon) carriedSupportCount++;
         if (isExpendableSupportWeapon) expendableSupportCount++;

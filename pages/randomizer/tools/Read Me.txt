@@ -1,0 +1,7 @@
+Start server
+Load http://localhost:8000/pages/randomizer/tools/audit.html
+Run Audit
+Download Item Odds (CSV)
+Move downloaded CSV into this folder (...\HD2 Server\pages\randomizer\tools)
+Run make_audit_xlsx.bat
+Open the newly created .xlsx to view an organized and detailed breakdown with charts on the last page for a quick visual.

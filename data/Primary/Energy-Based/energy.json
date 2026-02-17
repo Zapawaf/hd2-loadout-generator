@@ -5,8 +5,9 @@
     "icon": "img/Primary/Energy-Based/sg_8p_punisher_plasma.png",
     "tags": [
       "energy_based",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "two_handed",
+      "explosive"
     ]
   },
   {
@@ -15,8 +16,9 @@
     "icon": "img/Primary/Energy-Based/plas_39_accelerator_rifle.png",
     "tags": [
       "energy_based",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "two_handed",
+      "explosive"
     ]
   },
   {
@@ -25,7 +27,7 @@
     "icon": "img/Primary/Energy-Based/arc_12_blitzer.png",
     "tags": [
       "energy_based",
-      "pen_medium",
+      "medium_pen",
       "two_handed"
     ]
   },
@@ -35,8 +37,10 @@
     "icon": "img/Primary/Energy-Based/las_5_scythe.png",
     "tags": [
       "energy_based",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "beam",
+      "heat"
     ]
   },
   {
@@ -45,7 +49,7 @@
     "icon": "img/Primary/Energy-Based/las_16_sickle.png",
     "tags": [
       "energy_based",
-      "pen_light",
+      "light_pen",
       "two_handed"
     ]
   },
@@ -55,8 +59,11 @@
     "icon": "img/Primary/Energy-Based/las_17_double_edge_sickle.png",
     "tags": [
       "energy_based",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "medium_pen",
+      "heavy_pen",
+      "two_handed",
+      "heat"
     ]
   },
   {
@@ -65,8 +72,9 @@
     "icon": "img/Primary/Energy-Based/plas_1_scorcher.png",
     "tags": [
       "energy_based",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "two_handed",
+      "explosive"
     ]
   },
   {
@@ -75,14 +83,21 @@
     "icon": "img/Primary/Energy-Based/plas_101_purifier.png",
     "tags": [
       "energy_based",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "two_handed",
+      "explosive",
+      "chargeup"
     ]
   },
   {
     "id": "las_16_trident",
     "name": "LAS-16 Trident",
     "icon": "img/Primary/Energy-Based/las_16_trident.png",
-    "tags": ["energy_based", "two_handed"]
+    "tags": [
+      "energy_based", 
+      "two_handed",
+      "light_pen",
+      "energy_based"
+    ]
   }
 ]

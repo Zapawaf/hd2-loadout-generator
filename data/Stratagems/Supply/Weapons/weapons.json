@@ -5,9 +5,12 @@
     "icon": "img/Stratagems/Supply/Weapons/mg_43_machine_gun.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "medium_pen",
+      "horde_control"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "apw_1_anti_materiel_rifle",
@@ -15,9 +18,11 @@
     "icon": "img/Stratagems/Supply/Weapons/apw_1_anti_materiel_rifle.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "heavy_pen"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "m_105_stalwart",
@@ -25,9 +30,12 @@
     "icon": "img/Stratagems/Supply/Weapons/m_105_stalwart.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "light_pen",
+      "horde_control"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "eat_17_expendable_anti_tank",
@@ -35,9 +43,15 @@
     "icon": "img/Stratagems/Supply/Weapons/eat_17_expendable_anti_tank.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "expendable",
+      "anti_tank",
+      "explosive",
+      "demo",
+      "bug_hole"
     ],
-    "cooldown_sec": 70
+    "call_in_sec": 4.75,
+    "cooldown_sec": 59.85
   },
   {
     "id": "gr_8_recoilless_rifle",
@@ -46,9 +60,14 @@
     "tags": [
       "supply",
       "support_weapon",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "anti_tank",
+      "explosive",
+      "demo",
+      "bug_hole"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "flam_40_flamethrower",
@@ -56,9 +75,12 @@
     "icon": "img/Stratagems/Supply/Weapons/flam_40_flamethrower.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "incendiary",
+      "horde_control"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "ac_8_autocannon",
@@ -67,9 +89,14 @@
     "tags": [
       "supply",
       "support_weapon",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "heavy_pen",
+      "explosive",
+      "demo",
+      "bug_hole"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "mg_206_heavy_machine_gun",
@@ -77,9 +104,12 @@
     "icon": "img/Stratagems/Supply/Weapons/mg_206_heavy_machine_gun.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "heavy_pen",
+      "horde_control"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "rl_77_airburst_rocket_launcher",
@@ -88,9 +118,15 @@
     "tags": [
       "supply",
       "support_weapon",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "medium_pen",
+      "explosive",
+      "demo",
+      "horde_control",
+      "bug_hole"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "mls_4x_commando",
@@ -98,9 +134,15 @@
     "icon": "img/Stratagems/Supply/Weapons/mls_4x_commando.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "anti_tank",
+      "expendable",
+      "explosive",
+      "demo",
+      "bug_hole"
     ],
-    "cooldown_sec": 120
+    "call_in_sec": 4.75,
+    "cooldown_sec": 102.6
   },
   {
     "id": "rs_422_railgun",
@@ -108,9 +150,12 @@
     "icon": "img/Stratagems/Supply/Weapons/rs_422_railgun.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "anti_tank",
+      "chargeup"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "faf_14_spear",
@@ -119,9 +164,14 @@
     "tags": [
       "supply",
       "support_weapon",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "anti_tank",
+      "explosive",
+      "demo",
+      "guided"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "sta_x3_w_a_s_p_launcher",
@@ -130,9 +180,14 @@
     "tags": [
       "supply",
       "support_weapon",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "anti_tank",
+      "explosive",
+      "demo",
+      "guided"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "arc_3_arc_thrower",
@@ -140,9 +195,13 @@
     "icon": "img/Stratagems/Supply/Weapons/arc_3_arc_thrower.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "arc",
+      "stun",
+      "chargeup"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "gl_21_grenade_launcher",
@@ -150,9 +209,15 @@
     "icon": "img/Stratagems/Supply/Weapons/gl_21_grenade_launcher.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "heavy_pen",
+      "explosive",
+      "demo",
+      "horde_control",
+      "bug_hole"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "las_98_laser_cannon",
@@ -160,9 +225,14 @@
     "icon": "img/Stratagems/Supply/Weapons/las_98_laser_cannon.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "heavy_pen",
+      "energy_based",
+      "beam",
+      "heat"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "las_99_quasar_cannon",
@@ -170,9 +240,16 @@
     "icon": "img/Stratagems/Supply/Weapons/las_99_quasar_cannon.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "anti_tank",
+      "explosive",
+      "demo",
+      "energy_based",
+      "bug_hole",
+      "chargeup"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "tx_41_sterilizer",
@@ -180,9 +257,12 @@
     "icon": "img/Stratagems/Supply/Weapons/tx_41_sterilizer.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "gas",
+      "horde_control"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "gl_52_de_escalator",
@@ -190,9 +270,14 @@
     "icon": "img/Stratagems/Supply/Weapons/gl_52_de_escalator.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "arc",
+      "stun",
+      "medium_pen",
+      "horde_control"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "plas_45_epoch",
@@ -200,9 +285,15 @@
     "icon": "img/Stratagems/Supply/Weapons/plas_45_epoch.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "heavy_pen",
+      "explosive",
+      "stagger",
+      "demo",
+      "chargeup"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "s_11_speargun",
@@ -210,9 +301,15 @@
     "icon": "img/Stratagems/Supply/Weapons/s_11_speargun.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "gas",
+      "anti_tank",
+      "explosive",
+      "demo",
+      "bug_hole"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "m_1000_maxigun",
@@ -221,9 +318,12 @@
     "tags": [
       "supply",
       "support_weapon",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "medium_pen",
+      "horde_control"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "ms_11_solo_silo",
@@ -231,9 +331,15 @@
     "icon": "img/Stratagems/Supply/Weapons/ms_11_solo_silo.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "anti_tank",
+      "explosive",
+      "expendable",
+      "bug_hole",
+      "guided"
     ],
-    "cooldown_sec": 180
+    "call_in_sec": 4.75,
+    "cooldown_sec": 153.9
   },
   {
     "id": "cqc_1_one_true_flag",
@@ -241,9 +347,13 @@
     "icon": "img/Stratagems/Supply/Weapons/cqc_1_one_true_flag.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "one_handed",
+      "medium_pen",
+      "melee"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "cqc_9_defoliation_tool",
@@ -251,9 +361,13 @@
     "icon": "img/Stratagems/Supply/Weapons/cqc_9_defoliation_tool.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "anti_tank",
+      "demo",
+      "melee"
     ],
-    "cooldown_sec": 480
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   },
   {
     "id": "cqc_20_breaching_hammer",
@@ -261,8 +375,13 @@
     "icon": "img/Stratagems/Supply/Weapons/cqc_20_breaching_hammer.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "anti_tank",
+      "melee",
+      "explosive",
+      "demo"
     ],
+    "call_in_sec": 4.75,
     "cooldown_sec": 410
   },
   {
@@ -272,8 +391,14 @@
     "tags": [
       "supply",
       "support_weapon",
-      "uses_backpack_slot"
+      "uses_backpack_slot",
+      "explosive",
+      "heavy_pen",
+      "demo",
+      "bug_hole",
+      "horde_control"
     ],
+    "call_in_sec": 4.75,
     "cooldown_sec": 410
   },
   {
@@ -282,9 +407,16 @@
     "icon": "img/Stratagems/Supply/Weapons/eat_411_leveller.png",
     "tags": [
       "supply",
-      "support_weapon"
+      "support_weapon",
+      "anti_tank",
+      "expendable",
+      "explosive",
+      "demo",
+      "bug_hole",
+      "horde_control"
     ],
-    "cooldown_sec": 120
+    "call_in_sec": 4.75,
+    "cooldown_sec": 119.7
   },
   {
     "id": "eat_700_expendable_napalm",
@@ -295,8 +427,14 @@
     "tags": [
       "supply",
       "support_weapon",
-      "expendable"
-    ]
+      "expendable",
+      "incendiary",
+      "explosive",
+      "medium_pen",
+      "horde_control"
+    ],
+    "call_in_sec": 4.75,
+    "cooldown_sec": 119.7
   }
 
 ]

@@ -5,7 +5,7 @@
     "icon": "img/Primary/Submachine Gun/mp_98_knight.png",
     "tags": [
       "submachine_gun",
-      "pen_light",
+      "light_pen",
       "one_handed"
     ]
   },
@@ -15,7 +15,7 @@
     "icon": "img/Primary/Submachine Gun/sta_11_smg.png",
     "tags": [
       "submachine_gun",
-      "pen_light",
+      "light_pen",
       "one_handed"
     ]
   },
@@ -25,8 +25,9 @@
     "icon": "img/Primary/Submachine Gun/m7s_smg.png",
     "tags": [
       "submachine_gun",
-      "pen_light",
-      "one_handed"
+      "light_pen",
+      "one_handed",
+      "stealth"
     ]
   },
   {
@@ -35,7 +36,7 @@
     "icon": "img/Primary/Submachine Gun/smg_32_reprimand.png",
     "tags": [
       "submachine_gun",
-      "pen_medium",
+      "medium_pen",
       "one_handed"
     ]
   },
@@ -45,7 +46,7 @@
     "icon": "img/Primary/Submachine Gun/smg_37_defender.png",
     "tags": [
       "submachine_gun",
-      "pen_light",
+      "light_pen",
       "one_handed"
     ]
   },
@@ -55,8 +56,9 @@
     "icon": "img/Primary/Submachine Gun/smg_72_pummeler.png",
     "tags": [
       "submachine_gun",
-      "pen_light",
-      "one_handed"
+      "light_pen",
+      "one_handed",
+      "stagger"
     ]
   }
 ]

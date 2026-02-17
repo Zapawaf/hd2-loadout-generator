@@ -79,7 +79,7 @@ body{ margin: 10px !important; }
         font-family: inherit;
         font-size: 1.05rem; /* adjust if you want slightly bigger/smaller */
         line-height: 1.15;
-        font-weight: 600; /* “not bold” but still strong */
+        font-weight: 600; /* not bold but still strong */
         letter-spacing: 0.08em;
         text-transform: uppercase;
     }
@@ -254,5 +254,30 @@ body{ margin: 10px !important; }
 .stratagem-list li{
   gap: 10px !important;
   color: var(--yellow);
+}
+
+
+
+/* Center Equipment / Stratagems headers on mobile */
+.group-title{ text-align: center; 
+    display: block;
+    width: 100%;
+}
+
+/* ========================================================= */
+/* FORCE STRATAGEMS HEADER CENTER (Mobile Only) */
+/* ========================================================= */
+
+.loadout-right .slot-card > strong {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+/* Equipment only: make Primary / Secondary / Throwable white */
+.loadout-left .slot-card > strong,
+#equipmentColumn .slot-card > strong,
+#equipment .slot-card > strong {
+    color: #fff !important;
 }
 

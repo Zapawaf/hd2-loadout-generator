@@ -5,7 +5,10 @@
     "icon": "img/Throwable/Standard/ted_63_dynamite.png",
     "tags": [
       "standard",
-      "pen_heavy"
+      "heavy_pen",
+      "explosive",
+      "demo",
+      "bug_hole"
     ]
   },
   {
@@ -14,7 +17,10 @@
     "icon": "img/Throwable/Standard/g_6_frag.png",
     "tags": [
       "standard",
-      "pen_medium"
+      "medium_pen",
+      "explosive",
+      "demo",
+      "bug_hole"
     ]
   },
   {
@@ -23,7 +29,10 @@
     "icon": "img/Throwable/Standard/g_12_high_explosive.png",
     "tags": [
       "standard",
-      "pen_heavy"
+      "heavy_pen",
+      "explosive",
+      "demo",
+      "bug_hole"
     ]
   },
   {
@@ -32,7 +41,12 @@
     "icon": "img/Throwable/Standard/g_10_incendiary.png",
     "tags": [
       "standard",
-      "pen_medium"
+      "medium_pen",
+      "incendiary",
+      "explosive",
+      "demo",
+      "bug_hole",
+      "horde_control"
     ]
   },
   {
@@ -41,7 +55,11 @@
     "icon": "img/Throwable/Standard/g_7_pineapple.png",
     "tags": [
       "standard",
-      "pen_medium"
+      "medium_pen",
+      "explosive",
+      "demo",
+      "bug_hole",
+      "horde_control"
     ]
   }
 ]

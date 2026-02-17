@@ -5,8 +5,10 @@
     "icon": "img/Primary/Explosive/cb_9_exploding_crossbow.png",
     "tags": [
       "explosive",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "one_handed",
+      "demo",
+      "bug_hole"
     ]
   },
   {
@@ -15,8 +17,10 @@
     "icon": "img/Primary/Explosive/r_36_eruptor.png",
     "tags": [
       "explosive",
-      "pen_heavy",
-      "two_handed"
+      "heavy_pen",
+      "two_handed",
+      "demo",
+      "bug_hole"
     ]
   }
 ]

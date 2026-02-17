@@ -5,9 +5,13 @@
     "icon": "img/Stratagems/Defensive/Emplacements/e_mg_101_hmg_emplacement.png",
     "tags": [
       "defensive",
-      "emplacement"
+      "emplacement",
+      "heavy_pen",
+      "horde_control",
+      "stagger"
     ],
-    "cooldown_sec": 180
+    "call_in_sec": 4.75,
+    "cooldown_sec": 153.9
   },
   {
     "id": "e_gl_21_grenadier_battlement",
@@ -15,9 +19,15 @@
     "icon": "img/Stratagems/Defensive/Emplacements/e_gl_21_grenadier_battlement.png",
     "tags": [
       "defensive",
-      "emplacement"
+      "emplacement",
+      "explosive",
+      "medium_pen",
+      "horde_control",
+      "stagger"
+
     ],
-    "cooldown_sec": 120
+    "call_in_sec": 4.75,
+    "cooldown_sec": 102
   },
   {
     "id": "e_at_12_anti_tank_emplacement",
@@ -25,9 +35,13 @@
     "icon": "img/Stratagems/Defensive/Emplacements/e_at_12_anti_tank_emplacement.png",
     "tags": [
       "defensive",
-      "emplacement"
+      "emplacement",
+      "explosive",
+      "demo",
+      "anti_tank"
     ],
-    "cooldown_sec": 180
+    "call_in_sec": 4.75,
+    "cooldown_sec": 153.9
   },
   {
     "id": "fx_12_shield_generator_relay",
@@ -35,18 +49,11 @@
     "icon": "img/Stratagems/Defensive/Emplacements/fx_12_shield_generator_relay.png",
     "tags": [
       "defensive",
-      "emplacement"
+      "emplacement",
+      "self_defense",
+      "shield"
     ],
-    "cooldown_sec": 90
-  },
-  {
-    "id": "a_arc_3_tesla_tower",
-    "name": "A/ARC-3 Tesla Tower",
-    "icon": "img/Stratagems/Defensive/Emplacements/a_arc_3_tesla_tower.png",
-    "tags": [
-      "defensive",
-      "emplacement"
-    ],
-    "cooldown_sec": 120
+    "call_in_sec": 4.75,
+    "cooldown_sec": 76.95
   }
 ]

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HD2 Randomizer — Probability Audit</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 16px; }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; }
+    label { display: grid; gap: 6px; font-size: 14px; }
+    input, select, button { padding: 8px 10px; font-size: 14px; }
+    button { cursor: pointer; }
+    pre { background: #111; color: #eee; padding: 12px; overflow: auto; border-radius: 8px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 12px; }
+    th, td { border: 1px solid #ccc; padding: 6px 8px; font-size: 13px; }
+    th { background: #f2f2f2; text-align: left; }
+    .muted { color: #666; font-size: 13px; }
+    code { background:#f6f6f6; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <h1>HD2 Randomizer — Probability Audit</h1>
+  <p class="muted">
+    Runs the same rule set as your generator (4 stratagems, support/backpack/supply limits, one-handed constraint),
+    and applies profile macro/micro weights.
+  </p>
+
+  <div class="row">
+    <label>
+      Faction/Profile
+      <select id="faction">
+        <option value="random">Random</option>
+        <option value="automatons">Automatons</option>
+        <option value="terminids">Terminids</option>
+        <option value="illuminate">Illuminate</option>
+      </select>
+    </label>
+
+    <label>
+      Runs
+      <input id="runs" type="number" min="100" step="100" value="50000" />
+    </label>
+
+    <label>
+      Attempts per run
+      <input id="attempts" type="number" min="10" step="10" value="250" />
+    </label>
+
+    <button id="runBtn">Run Audit</button>
+    <button id="dlItemsBtn" disabled>Download Item Odds (CSV)</button>
+    <button id="dlTagsBtn" disabled>Download Tag Odds (CSV)</button>
+  <button id="dlSlot1Btn" disabled>Download Strat Slot 1 (CSV)</button>
+  </div>
+
+  <p class="muted" style="margin-top:8px;">
+    Want an Excel workbook with separate tables/sheets? Use <code>make_audit_xlsx.py</code> included in this zip
+    after downloading the CSVs.
+  </p>
+
+  <p id="status" class="muted">Ready.</p>
+
+  <details style="margin-top:12px;">
+    <summary>Show raw log</summary>
+    <pre id="log"></pre>
+  </details>
+
+  <h2>Top results</h2>
+  <div id="results"></div>
+
+  <script type="module" src="./audit.js"></script>
+</body>
+</html>

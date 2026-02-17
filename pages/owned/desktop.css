@@ -114,3 +114,28 @@
   color: var(--yellow, #ffd800) !important;
   text-decoration: none;
 }
+
+
+/* ========================================================= */
+/* OWNED — FOOTER OVERRIDE (force bottom; defeat shared.css) */
+/* ========================================================= */
+html body .page-root footer.license-footer#licenseFooter {
+  position: static !important;
+  inset: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  z-index: auto !important;
+  width: auto !important;
+
+  margin-top: auto !important;
+  padding: 16px 16px !important;
+  text-align: center !important;
+}
+
+/* Owned page: match Randomizer footer spacing (avoid hugging taskbar) */
+.license-footer{
+  padding-bottom: 24px;
+}

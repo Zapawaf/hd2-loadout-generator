@@ -5,8 +5,9 @@
     "icon": "img/Secondary/Pistol/p_92_warrant.png",
     "tags": [
       "pistol",
-      "pen_medium",
-      "one_handed"
+      "medium_pen",
+      "one_handed",
+      "guided"
     ]
   },
   {
@@ -15,7 +16,7 @@
     "icon": "img/Secondary/Pistol/p_2_peacemaker.png",
     "tags": [
       "pistol",
-      "pen_light",
+      "light_pen",
       "one_handed"
     ]
   },
@@ -25,7 +26,7 @@
     "icon": "img/Secondary/Pistol/p_19_redeemer.png",
     "tags": [
       "pistol",
-      "pen_light",
+      "light_pen",
       "one_handed"
     ]
   },
@@ -35,7 +36,7 @@
     "icon": "img/Secondary/Pistol/p_113_verdict.png",
     "tags": [
       "pistol",
-      "pen_medium",
+      "medium_pen",
       "one_handed"
     ]
   },
@@ -45,8 +46,9 @@
     "icon": "img/Secondary/Pistol/m6c_socom_pistol.png",
     "tags": [
       "pistol",
-      "pen_light",
-      "one_handed"
+      "light_pen",
+      "one_handed",
+      "stealth"
     ]
   },
   {
@@ -55,8 +57,9 @@
     "icon": "img/Secondary/Pistol/p_4_senator.png",
     "tags": [
       "pistol",
-      "pen_heavy",
-      "one_handed"
+      "heavy_pen",
+      "one_handed",
+      "rounds_reload"
     ]
   }
 ]

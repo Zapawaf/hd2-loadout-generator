@@ -5,8 +5,12 @@
     "icon": "img/Stratagems/Supply/Vehicles/m_102_fast_recon_vehicle.png",
     "tags": [
       "supply",
-      "vehicle"
+      "vehicle",
+      "mobility",
+      "heavy_pen",
+      "capacity_4"
     ],
+    "call_in_sec": 10.5,
     "cooldown_sec": 480
   },
   {
@@ -15,8 +19,15 @@
     "icon": "img/Stratagems/Supply/Vehicles/exo_45_patriot_exosuit.png",
     "tags": [
       "supply",
-      "vehicle"
+      "vehicle",
+      "explosive",
+      "medium_pen",
+      "anti_tank",
+      "demo",
+      "horde_control",
+      "bug_hole"
     ],
+    "call_in_sec": 10.5,
     "cooldown_sec": 600
   },
   {
@@ -25,8 +36,14 @@
     "icon": "img/Stratagems/Supply/Vehicles/exo_49_emancipator_exosuit.png",
     "tags": [
       "supply",
-      "vehicle"
+      "vehicle",
+      "explosive",
+      "anti_tank",
+      "demo",
+      "horde_control",
+      "bug_hole"
     ],
+    "call_in_sec": 10.5,
     "cooldown_sec": 600
   },
   {
@@ -37,8 +54,15 @@
     "icon": "img/Stratagems/Supply/Vehicles/td_220_bastion_mk_xvi.png",
     "tags": [
       "supply",
-      "vehicle"
+      "vehicle",
+      "explosive",
+      "anti_tank",
+      "heavy_pen",
+      "demo",
+      "capacity_4",
+      "bug_hole"
     ],
+    "call_in_sec": 10.5,
     "cooldown_sec": 780
   }
 ]

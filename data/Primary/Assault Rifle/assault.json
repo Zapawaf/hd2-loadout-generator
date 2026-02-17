@@ -5,7 +5,7 @@
     "icon": "img/Primary/Assault Rifle/ar_23_liberator.png",
     "tags": [
       "assault_rifle",
-      "pen_light",
+      "light_pen",
       "two_handed"
     ]
   },
@@ -15,7 +15,7 @@
     "icon": "img/Primary/Assault Rifle/ar_23p_liberator_penetrator.png",
     "tags": [
       "assault_rifle",
-      "pen_medium",
+      "medium_pen",
       "two_handed"
     ]
   },
@@ -25,8 +25,9 @@
     "icon": "img/Primary/Assault Rifle/ar_23c_liberator_concussive.png",
     "tags": [
       "assault_rifle",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "stagger"
     ]
   },
   {
@@ -35,7 +36,7 @@
     "icon": "img/Primary/Assault Rifle/sta_52_assault_rifle.png",
     "tags": [
       "assault_rifle",
-      "pen_light",
+      "light_pen",
       "two_handed"
     ]
   },
@@ -45,8 +46,9 @@
     "icon": "img/Primary/Assault Rifle/ar_32_pacifier.png",
     "tags": [
       "assault_rifle",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "two_handed",
+      "stun"
     ]
   },
   {
@@ -55,8 +57,9 @@
     "icon": "img/Primary/Assault Rifle/ar_2_coyote.png",
     "tags": [
       "assault_rifle",
-      "pen_medium",
-      "two_handed"
+      "medium_pen",
+      "two_handed",
+      "incendiary"
     ]
   },
   {
@@ -65,7 +68,7 @@
     "icon": "img/Primary/Assault Rifle/ma5c_assault_rifle.png",
     "tags": [
       "assault_rifle",
-      "pen_medium",
+      "medium_pen",
       "two_handed"
     ]
   },
@@ -75,7 +78,7 @@
     "icon": "img/Primary/Assault Rifle/ar_23a_liberator_carbine.png",
     "tags": [
       "assault_rifle",
-      "pen_light",
+      "light_pen",
       "two_handed"
     ]
   },
@@ -85,7 +88,7 @@
     "icon": "img/Primary/Assault Rifle/ar_61_tenderizer.png",
     "tags": [
       "assault_rifle",
-      "pen_light",
+      "light_pen",
       "two_handed"
     ]
   },
@@ -95,7 +98,7 @@
     "icon": "img/Primary/Assault Rifle/br_14_adjudicator.png",
     "tags": [
       "assault_rifle",
-      "pen_medium",
+      "medium_pen",
       "two_handed"
     ]
   },
@@ -105,8 +108,10 @@
     "icon": "img/Primary/Assault Rifle/ar_gl_21_one_two.png",
     "tags": [
       "assault_rifle",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "demo",
+      "bug_hole"
     ]
   },
   {
@@ -115,8 +120,9 @@
     "icon": "img/Primary/Assault Rifle/ar_59_suppressor.png",
     "tags": [
       "assault_rifle",
-      "pen_light",
-      "two_handed"
+      "light_pen",
+      "two_handed",
+      "stealth"
     ]
   }
 ]
