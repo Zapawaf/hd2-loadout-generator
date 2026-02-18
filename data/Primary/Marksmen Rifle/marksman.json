@@ -2,7 +2,7 @@
   {
     "id": "r_2_amendment",
     "name": "R-2 Amendment",
-    "icon": "img/Primary/Marksman/r_2_amendment.png",
+    "icon": "img/Primary/Marksman Rifle/r_2_amendment.png",
     "tags": [
       "marksmen_rifle",
       "light_pen",
@@ -12,7 +12,7 @@
   {
     "id": "r_2124_constitution",
     "name": "R-2124 Constitution",
-    "icon": "img/Primary/Marksman/r_2124_constitution.png",
+    "icon": "img/Primary/Marksman Rifle/r_2124_constitution.png",
     "tags": [
       "marksmen_rifle",
       "medium_pen",
@@ -23,7 +23,7 @@
   {
     "id": "r_6_deadeye",
     "name": "R-6 Deadeye",
-    "icon": "img/Primary/Marksman/r_6_deadeye.png",
+    "icon": "img/Primary/Marksman Rifle/r_6_deadeye.png",
     "tags": [
       "marksmen_rifle",
       "medium_pen",
@@ -34,7 +34,7 @@
   {
     "id": "r_63_diligence",
     "name": "R-63 Diligence",
-    "icon": "img/Primary/Marksman/r_63_diligence.png",
+    "icon": "img/Primary/Marksman Rifle/r_63_diligence.png",
     "tags": [
       "marksmen_rifle",
       "light_pen",
@@ -44,7 +44,7 @@
   {
     "id": "r_63cs_diligence_counter_sniper",
     "name": "R-63CS Diligence Counter Sniper",
-    "icon": "img/Primary/Marksman/r_63cs_diligence_counter_sniper.png",
+    "icon": "img/Primary/Marksman Rifle/r_63cs_diligence_counter_sniper.png",
     "tags": [
       "marksmen_rifle",
       "medium_pen",
@@ -54,7 +54,7 @@
   {
     "id": "r_72_censor",
     "name": "R-72 Censor",
-    "icon": "img/Primary/Marksman/r_72_censor.png",
+    "icon": "img/Primary/Marksman Rifle/r_72_censor.png",
     "tags": [
       "marksmen_rifle",
       "light_pen",
