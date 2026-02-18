@@ -1,11 +1,11 @@
 export default {
   name: "Random",
 
-  /* Can be used edit default rules
+  
   rules: {
     // Turn on �even top-type selection� for stratagem slots (33/33/33 baseline)
     useEvenStratagemTop: true,
-    maxSupportWeapons: 1,
+    maxSupportWeapons: 2,
     maxBackpackSlot: 1,
     maxSupplyStratagems: 2,
     preventDoubleExosuit: true,
@@ -13,7 +13,6 @@ export default {
     enforceOneHandedIfRequired: true,
     ALLOW_EXPENDABLE_AS_GUARANTEED_SUPPORT: false,
   },
-  */
 
   macro: {
     // Equipment
@@ -42,7 +41,7 @@ export default {
     stratagemTop: {
       "Offensive": 1.00,
       "Defensive": 1.00,
-      "Supply": 1.00,
+      "Supply": 0.80,
     },
 
     offensiveSub: {
@@ -53,13 +52,13 @@ export default {
     defensiveSub: {
       "Sentries": 1.00,
       "Mines": 1.00,
-      "Emplacements": 1.00,
+      "Emplacements": 0.80,
     },
 
     supplySub: {
       "Weapons": 1.00,
-      "Backpacks": 1.00,
-      "Vehicles": 1.00,
+      "Backpacks": 0.70,
+        "Vehicles": 0.50,
     },
   },
 
