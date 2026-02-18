@@ -507,15 +507,29 @@ const STRATAGEM_DISPLAY_ORDER = ["supply", "defensive", "offensive"];
 
 function getStratagemDisplayRank(strat) {
     const tags = Array.isArray(strat?.tags) ? strat.tags : [];
-    // 1️⃣ Always show support weapons first in visible order
-    // (This assumes your rule guarantees at least one exists)
-    if (tags.includes("support_weapon")) return -1;
+    const id = String(strat?.id || strat?._id || "").toLowerCase();
 
+    const isSupport = tags.includes("support_weapon");
+    const isExpendable = tags.includes("expendable");
+
+    // 1) Carried support weapons first (support_weapon && !expendable)
+    if (isSupport && !isExpendable) return -2;
+
+    // 2) Expendable support weapons should NOT steal Slot 1 from normal Supply.
+    // Put them after Supply, but before Defensive/Offensive.
+    if (isSupport && isExpendable) {
+        // Slight extra push for Solo Silo so it doesn't appear early within the expendable bucket.
+        if (id === "ms_11_solo_silo") return 0.75;
+        return 0.5;
+    }
+
+    // 3) Normal category order: Supply → Defensive → Offensive
     for (let i = 0; i < STRATAGEM_DISPLAY_ORDER.length; i++) {
         if (tags.includes(STRATAGEM_DISPLAY_ORDER[i])) return i;
     }
     return 999; // Unknown/missing category tags go last
 }
+
 
 function sortStratagemsForDisplay(stratagems) {
     return [...stratagems].sort((a, b) => {
@@ -668,30 +682,7 @@ function renderLoadout({ primary, secondary, grenade, stratagems }, note = "") {
     const ul = $("stratagemList");
     ul.innerHTML = "";
 
-    const sortedStratagems = [...(stratagems || [])].sort((a, b) => {
-        // tier order: support_weapon > other supply > defensive > offensive
-        const tier = (s) => {
-            const isSupport = hasTag(s, "support_weapon");
-            const isSupply = hasTag(s, "supply");
-            const isDef = hasTag(s, "defensive");
-            const isOff = hasTag(s, "offensive");
-
-            if (isSupport) return 0;
-            if (isSupply) return 1;
-            if (isDef) return 2;
-            if (isOff) return 3;
-
-            // unknown / untagged goes last
-            return 99;
-        };
-
-        const ta = tier(a);
-        const tb = tier(b);
-        if (ta !== tb) return ta - tb;
-
-        // same tier -> sort by name
-        return (a?.name || "").localeCompare(b?.name || "");
-    });
+    const sortedStratagems = sortStratagemsForDisplay(stratagems || []);
 
 
     for (const s of sortedStratagems) {
@@ -784,6 +775,83 @@ function pickStratagemsWithRules(profile, excludedSets) {
         return chosen;
     }
 
+    function pickFromPoolByCandidates(candidates, weightFn) {
+        if (!candidates || candidates.length === 0) return null;
+        const chosen = weightedPick(candidates, weightFn);
+        if (!chosen) return null;
+        const idx = pool.findIndex(x => x.id === chosen.id);
+        if (idx >= 0) pool.splice(idx, 1);
+        return chosen;
+    }
+
+    // Hierarchical stratagem selection:
+    // 1) Pick Top (Supply/Defensive/Offensive) using ONLY macro.stratagemTop (and availability)
+    // 2) Pick Sub within that top using ONLY macro.<top>Sub (and availability)
+    // 3) Pick Item within that sub using ONLY micro/scoped weights (no macro), so tags can't "resurrect" a nerfed category.
+    function pickHierarchicalStratagem(preferredTop) {
+        // Eligible for non-guaranteed slots: respect rules, and also avoid extra carried supports (slot 1 already handled)
+        const eligible = pool.filter(it =>
+            !(hasTag(it, "support_weapon") && !hasTag(it, "expendable")) &&
+            !wouldViolateRules(it)
+        );
+        if (!eligible.length) return null;
+
+        const macroTop = profile?.macro?.stratagemTop || {};
+        const topNames = ["Offensive", "Defensive", "Supply"];
+
+        // Build top candidates with availability counts so we don't pick empty buckets.
+        let tops = topNames.map(t => {
+            const count = eligible.filter(it => it?._stratTop === t).length;
+            const base = (Number.isFinite(macroTop?.[t]) ? macroTop[t] : 1.0);
+            const w = base * (count > 0 ? count : 0);
+            return { t, w, count };
+        }).filter(x => x.count > 0 && x.w > 0);
+
+        if (!tops.length) return null;
+
+        // Try preferredTop first, but fall back gracefully if no eligible candidates exist there.
+        let topPick = null;
+        if (preferredTop) {
+            const found = tops.find(x => x.t === preferredTop);
+            if (found) topPick = preferredTop;
+        }
+        if (!topPick) {
+            topPick = weightedPick(tops, x => x.w)?.t;
+        }
+        if (!topPick) return null;
+
+        // Subcategory selection
+        const macro = profile?.macro || {};
+        let subWeights = {};
+        if (topPick === "Offensive") subWeights = macro.offensiveSub || {};
+        else if (topPick === "Defensive") subWeights = macro.defensiveSub || {};
+        else if (topPick === "Supply") subWeights = macro.supplySub || {};
+
+        const eligibleTop = eligible.filter(it => it?._stratTop === topPick);
+        if (!eligibleTop.length) return null;
+
+        const subs = {};
+        for (const it of eligibleTop) {
+            const sub = it?._stratSub || "Unknown";
+            subs[sub] = (subs[sub] || 0) + 1;
+        }
+
+        const subChoices = Object.entries(subs).map(([sub, count]) => {
+            const wSub = (Number.isFinite(subWeights?.[sub]) ? subWeights[sub] : 1.0);
+            // Multiply by count so big buckets don't get under-picked purely due to having more items.
+            return { sub, w: wSub * count, count };
+        }).filter(x => x.count > 0 && x.w > 0);
+
+        const subPick = (subChoices.length ? weightedPick(subChoices, x => x.w)?.sub : null) || (eligibleTop[0]?._stratSub);
+
+        const eligibleSub = eligibleTop.filter(it => (it?._stratSub || "Unknown") === subPick);
+        if (!eligibleSub.length) return null;
+
+        // Item selection within sub uses MICRO ONLY (no macro), so "incendiary" etc. only tilt within the chosen bucket.
+        const chosen = pickFromPoolByCandidates(eligibleSub, it => getMicroMultiplier(it, profile));
+        return chosen;
+    }
+
     if (useEvenTop) {
         // Force one support weapon first so "visible Slot 1" is always support after display-sort.
         let supportPick = pickFromPoolFiltered(it =>
@@ -807,22 +875,15 @@ function pickStratagemsWithRules(profile, excludedSets) {
         while (picked.length < CONFIG.STRATAGEM_COUNT) {
             if (pool.length === 0) return null;
 
-            const desiredTop = pickStratagemTopEven(profile);
+            // Stage 1 (Top): choose Supply/Defensive/Offensive using ONLY macro.stratagemTop.
+            // We pass a preferred top to keep the "even top" feel, but selection stays hierarchical.
+            const preferredTop = pickStratagemTopEven(profile);
 
-            // Try desired top-type first (exclude extra support weapons)
-            let next = pickFromPoolFiltered(it =>
-                it?._stratTop === desiredTop &&
-                !hasTag(it, "support_weapon") &&
-                !wouldViolateRules(it)
-            );
+            // Stage 2 (Sub) + Stage 3 (Item): pick within the chosen bucket.
+            let next = pickHierarchicalStratagem(preferredTop);
 
-            // Fallback: any eligible non-support stratagem
-            if (!next) {
-                next = pickFromPoolFiltered(it =>
-                    !hasTag(it, "support_weapon") &&
-                    !wouldViolateRules(it)
-                );
-            }
+            // Fallback: let the hierarchical picker choose any top/sub that has eligible candidates.
+            if (!next) next = pickHierarchicalStratagem(null);
 
             if (!next) return null;
 
