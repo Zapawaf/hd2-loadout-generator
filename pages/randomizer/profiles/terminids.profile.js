@@ -36,8 +36,8 @@
     },
     stratagemTop: {
       Offensive: 1.00,
-      Defensive: 0.85,
-      Supply: 0.50,
+      Defensive: 0.70,
+      Supply: 0.40,
     },
     offensiveSub: {
       "Eagle Airstrikes": 1.20,
