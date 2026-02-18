@@ -15,56 +15,45 @@ export default {
   },
 
   macro: {
-    // Equipment
     primarySubcategory: {
       "Assault Rifle": 1.00,
       "Submachine Gun": 1.00,
-      "Shotgun": 1.00,
+      Shotgun: 1.00,
       "Marksmen Rifle": 1.00,
       "Energy-Based": 1.00,
-      "Explosive": 1.00,
-      "Special": 1.00,
+      Explosive: 1.00,
+      Special: 1.00,
     },
-
     secondarySubcategory: {
-      "Pistol": 1.00,
-      "Melee": 1.00,
-      "Special": 1.00,
+      Pistol: 1.00,
+      Melee: 1.00,
+      Special: 1.00,
     },
-
     throwableSubcategory: {
-      "Standard": 1.00,
-      "Special": 1.00,
+      Standard: 1.00,
+      Special: 1.00,
     },
-
-    // Stratagems
     stratagemTop: {
-      "Offensive": 1.00,
-      "Defensive": 1.00,
-      "Supply": 0.80,
+      Offensive: 1.00,
+      Defensive: 0.85,
+      Supply: 0.40,
     },
-
     offensiveSub: {
-      "Eagle Airstrikes": 1.00,
-      "Orbitals": 1.00,
+      "Eagle Airstrikes": 1.10,
+      Orbitals: 1.20,
     },
-
     defensiveSub: {
-      "Sentries": 1.00,
-      "Mines": 1.00,
-      "Emplacements": 0.80,
+      Sentries: 1.00,
+      Mines: 0.80,
+      Emplacements: 0.60,
     },
-
     supplySub: {
-      "Weapons": 1.00,
-      "Backpacks": 0.70,
-        "Vehicles": 0.50,
+      Weapons: 1.00,
+      Backpacks: 0.80,
+      Vehicles: 0.25,
     },
   },
-
   micro: {
-    // Tag weights: unknown tags default to 1.00 in the picker (recommended),
-    // but listing common ones here makes the knobs visible.
     tag: {
       horde_control: 1.00,
       stun: 1.00,
@@ -93,171 +82,30 @@ export default {
       uses_backpack_slot: 1.00,
       requires_one_handed_primary: 1.00,
     },
-
     id: {
-      // per-item overrides (none active)
+      example_item_id_here: 1.00,
     },
-
-
-    // ============================================================
-    // SCOPED MICRO (optional)
-    //
-    // Lets you bias tags/ids ONLY within a specific pool and/or subcategory.
-    // Resolution order for a given tag/id (first match wins):
-    // 1) micro.pools.<pool>.categories["<Subcategory>"].tag / .id
-    // 2) micro.pools.<pool>.tag / .id
-    // 3) micro.tag / micro.id (global fallback)
-    //
-    // Pools:
-    // - primaries, secondaries, throwables, stratagems
-    //
-    // Stratagem category keys support:
-    // - "Top/Sub" (e.g., "Offensive/Orbitals", "Supply/Backpacks")
-    // - "Sub" only (e.g., "Orbitals")
-    // - "Top" only (e.g., "Offensive")
-    // ============================================================
     pools: {
-
       primaries: {
-        tag: {
-          // Example: medium_pen: 1.10
-        },
-        id: {
-          // Example: "ar_23_liberator": 0.90
-        },
-        categories: {
-
-          "Assault Rifle": {
-            tag: {},
-            id: {}
-          },
-
-          "Submachine Gun": {
-            tag: {},
-            id: {}
-          },
-
-          "Shotgun": {
-            tag: {},
-            id: {}
-          },
-
-          "Marksmen Rifle": {
-            tag: {},
-            id: {}
-          },
-
-          "Energy-Based": {
-            tag: {},
-            id: {}
-          },
-
-          "Explosive": {
-            tag: {},
-            id: {}
-          },
-
-          "Special": {
-            tag: {},
-            id: {}
-          }
-
-        }
+        tag: {},
+        id: {},
+        categories: {},
       },
-
       secondaries: {
         tag: {},
         id: {},
-        categories: {
-
-          "Pistol": {
-            tag: {},
-            id: {}
-          },
-
-          "Melee": {
-            tag: {},
-            id: {}
-          },
-
-          "Special": {
-            tag: {},
-            id: {}
-          }
-
-        }
+        categories: {},
       },
-
       throwables: {
         tag: {},
         id: {},
-        categories: {
-
-          "Standard": {
-            tag: {},
-            id: {}
-          },
-
-          "Special": {
-            tag: {},
-            id: {}
-          }
-
-        }
+        categories: {},
       },
-
       stratagems: {
         tag: {},
         id: {},
-        categories: {
-
-          // Offensive
-          "Offensive/Eagle Airstrikes": {
-            tag: {},
-            id: {}
-          },
-
-          "Offensive/Orbitals": {
-            tag: {},
-            id: {}
-          },
-
-          // Defensive
-          "Defensive/Sentries": {
-            tag: {},
-            id: {}
-          },
-
-          "Defensive/Mines": {
-            tag: {},
-            id: {}
-          },
-
-          "Defensive/Emplacements": {
-            tag: {},
-            id: {}
-          },
-
-          // Supply
-          "Supply/Weapons": {
-            tag: {},
-            id: {}
-          },
-
-          "Supply/Backpacks": {
-            tag: {},
-            id: {}
-          },
-
-          "Supply/Vehicles": {
-            tag: {},
-            id: {}
-          }
-
-        }
-      }
-
+        categories: {},
+      },
     },
-
   },
 };
