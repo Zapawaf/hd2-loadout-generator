@@ -17,6 +17,16 @@
         min-width: 0;
     }
 
+    /* Centers page tip that's below the title*/
+    .wip-disclaimer {
+        text-align: center;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto 20px auto; /* centers and adds spacing below */
+        color: var(--hd-yellow); /* optional – matches your theme */
+        font-size: 0.95rem;
+    }
+
         /* --- Center column headers --- */
         .loadout-left .slot-card > strong,
         .loadout-right .slot-card > strong {

@@ -15,6 +15,17 @@ body{ margin: 10px !important; }
 /* Critical: prevents text from being squeezed into single-letter columns */
 *{ min-width:0; }
 
+
+/* Centers page info that's below the title*/
+.wip-disclaimer {
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 20px auto; /* centers and adds spacing below */
+    color: var(--hd-yellow); /* optional – matches your theme */
+    font-size: 0.95rem;
+}
+
 /* ======================================================
    Sidebar/layout shell (injected by pages/_shared/sidebar.js)
    Ensure sidebar never steals width on mobile.
