@@ -22,7 +22,7 @@ export default {
       Shotgun: 0.70,
       "Marksmen Rifle": 0.60,
       "Energy-Based": 1.00,
-      Explosive: 1.00,
+      Explosive: 0.85,
       Special: 1.00,
     },
     secondarySubcategory: {
