@@ -47,6 +47,7 @@ const shell = document.createElement('div');
   // Keep link list in one place so every new page can reuse it
   const links = [
     { href: '/pages/randomizer/', label: 'Randomizer', icon: '🎲' },
+    { href: '/pages/themes/', label: 'Themes', icon: '🎭' },
     { href: '/pages/owned/', label: 'Owned Items', icon: '✅' },
     // Future pages (safe placeholders)
     // { href: './roadmap.html', label: 'Roadmap', icon: '🗺️' },
