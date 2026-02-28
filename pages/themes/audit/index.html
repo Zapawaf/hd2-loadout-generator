@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Themes Audit — HD2 Loadout Generator</title>
+
+  <link rel="stylesheet" href="/pages/_shared/shared.css"/>
+  <link rel="stylesheet" href="/pages/_shared/sidebar.css"/>
+
+  <!-- Match Randomizer look -->
+  <link rel="stylesheet" href="/pages/randomizer/desktop.css" media="(min-width: 901px)">
+  <link rel="stylesheet" href="/pages/randomizer/mobile.css" media="(max-width: 900px)">
+
+  <style>
+    .audit-wrap { max-width: 1100px; margin: 0 auto; }
+    .audit-controls { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin: 12px 0 16px; }
+    select, button { font-size: 16px; }
+    .audit-card { background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 12px; margin: 12px 0; }
+    .audit-grid { display:grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 901px) { .audit-grid { grid-template-columns: 1fr 1fr; } }
+    .audit-kv { display:grid; grid-template-columns: 1fr auto; gap: 6px 12px; }
+    .audit-kv div { padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .audit-kv div:last-child, .audit-kv div:nth-last-child(2) { border-bottom:none; }
+    code { color: var(--yellow); }
+    .muted { color: var(--muted); }
+    .warn { color: #ffb86b; }
+    .bad  { color: #ff6b6b; }
+    .good { color: #6bff9a; }
+    .small { font-size: 0.95rem; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
+</head>
+
+<body>
+  <div id="pageContent" class="audit-wrap">
+    <h1>Helldivers 2 Loadout Generator</h1>
+
+    <p class="wip-disclaimer">
+      <strong>Themes Audit:</strong> Quick sanity check for a theme’s candidate pools after rules are applied.
+      This page is self-contained and does not modify Randomizer code.
+    </p>
+
+    <div class="audit-controls">
+      <label for="themeSelect" class="muted">Theme</label>
+      <select id="themeSelect"></select>
+      <button id="analyzeBtn">Analyze</button>
+      <span id="status" class="muted small"></span>
+    </div>
+
+    <div id="out"></div>
+  </div>
+
+  <script src="/pages/_shared/sidebar.js"></script>
+  <script type="module" src="./audit.js"></script>
+</body>
+</html>

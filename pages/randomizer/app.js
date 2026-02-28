@@ -324,8 +324,8 @@ async function loadJson(path) {
 function normalizeIconPath(src) {
     if (!src || typeof src !== "string") return src;
     return src
-        .replace(/\/Primary\/Marksman\//g, "/Primary/Marksmen Rifle/")
-        .replace(/\/Primary\/Marksman Rifle\//g, "/Primary/Marksmen Rifle/");
+        .replace(/\/Primary\/Marksman\//g, "/Primary/Marksman Rifle/")
+        .replace(/\/Primary\/Marksman Rifle\//g, "/Primary/Marksman Rifle/");
 }
 
 async function loadAndMerge(paths) {
@@ -461,8 +461,8 @@ function setIcon(imgEl, src, alt) {
 
     // Fix known folder-name mismatches without touching data/img.
     let normalized = src
-        .replace(/\/Primary\/Marksman\//g, "/Primary/Marksmen Rifle/")
-        .replace(/\/Primary\/Marksman Rifle\//g, "/Primary/Marksmen Rifle/");
+        .replace(/\/Primary\/Marksman\//g, "/Primary/Marksman Rifle/")
+        .replace(/\/Primary\/Marksmen Rifle\//g, "/Primary/Marksman Rifle/");
 
     // Normalize icon path so it always resolves from site root.
     // Prevents pages under /pages/... from looking for /pages/.../img/...
@@ -482,7 +482,7 @@ function setIcon(imgEl, src, alt) {
 
             // If spaces weren't encoded for some reason, retry with encoded spaces.
             // (encodeURI should handle it, but this is a safe fallback.)
-            const fallback = normalized.replace("Marksmen Rifle", "Marksmen%20Rifle");
+            const fallback = normalized.replace("Marksman Rifle", "Marksman%20Rifle");
 
             if (fallback !== imgEl.src) {
                 imgEl.style.display = "none";
@@ -553,7 +553,7 @@ const DATA_PATHS = {
         "/data/Primary/Assault Rifle/assault.json",
         "/data/Primary/Energy-Based/energy.json",
         "/data/Primary/Explosive/explosive.json",
-        "/data/Primary/Marksmen Rifle/marksman.json",
+        "/data/Primary/Marksman Rifle/marksman.json",
         "/data/Primary/Shotgun/shotgun.json",
         "/data/Primary/Special/special.json",
         "/data/Primary/Submachine Gun/smg.json"

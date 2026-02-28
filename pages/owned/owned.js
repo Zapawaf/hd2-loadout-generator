@@ -48,8 +48,8 @@ async function loadAndMerge(paths) {
         const fixKnownIconPath = (icon) => {
             if (!icon || typeof icon !== "string") return icon;
             return icon
-                .replace(/\/Primary\/Marksman\//g, "/Primary/Marksmen Rifle/")
-                .replace(/\/Primary\/Marksman Rifle\//g, "/Primary/Marksmen Rifle/");
+                .replace(/\/Primary\/Marksman\//g, "/Primary/Marksman Rifle/")
+                .replace(/\/Primary\/Marksman Rifle\//g, "/Primary/Marksman Rifle/");
         };
 
         const makeIconPathRelative = (icon) => {
@@ -87,7 +87,7 @@ const DATA_PATHS = {
         "/data/Primary/Assault Rifle/assault.json",
         "/data/Primary/Energy-Based/energy.json",
         "/data/Primary/Explosive/explosive.json",
-        "/data/Primary/Marksmen Rifle/marksman.json",
+        "/data/Primary/Marksman Rifle/marksman.json",
         "/data/Primary/Shotgun/shotgun.json",
         "/data/Primary/Special/special.json",
         "/data/Primary/Submachine Gun/smg.json"
@@ -119,8 +119,8 @@ const state = { primaries: [], secondaries: [], grenades: [], stratagems: [] };
 
 function resolveIconFallbacks(src) {
     if (!src) return null;
-    if (src.includes("/Primary/Marksman/")) return src.replace("/Primary/Marksman/", "/Primary/Marksmen%20Rifle/");
-    if (src.includes("/Primary/Marksman Rifle/")) return src.replace("/Primary/Marksman Rifle/", "/Primary/Marksmen%20Rifle/");
+    if (src.includes("/Primary/Marksman/")) return src.replace("/Primary/Marksman/", "/Primary/Marksman%20Rifle/");
+    if (src.includes("/Primary/Marksman Rifle/")) return src.replace("/Primary/Marksman Rifle/", "/Primary/Marksman%20Rifle/");
     return null;
 }
 

@@ -1,0 +1,167 @@
+/* pages/themes/desktop.css
+   Goal: Mirror Randomizer layout (two cards side-by-side, consistent typography). */
+
+:root{
+  --hd2-bg: #0b0f16;
+  --hd2-card: rgba(14, 22, 36, 0.78);
+  --hd2-card-border: rgba(255,255,255,0.12);
+  --hd2-text: rgba(255,255,255,0.86);
+  --hd2-yellow: #ffd100;
+}
+
+body{
+  background: radial-gradient(circle at 20% 10%, rgba(255,209,0,0.06), transparent 40%),
+              radial-gradient(circle at 80% 20%, rgba(0,180,255,0.06), transparent 45%),
+              var(--hd2-bg);
+  color: var(--hd2-text);
+}
+
+.page-hero{
+  max-width: 1180px;
+  margin: 22px auto 0;
+  padding: 0 18px;
+  text-align: center;
+}
+
+.page-title{
+  margin: 0;
+  letter-spacing: 2px;
+  color: var(--hd2-yellow);
+  font-weight: 800;
+  font-size: 44px;
+}
+
+.page-subtitle{
+  margin: 10px auto 0;
+  max-width: 820px;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.75);
+}
+
+.page-controls{
+  margin: 16px auto 0;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn{
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:hover{ background: rgba(255,255,255,0.09); }
+.btn:active{ transform: translateY(1px); }
+
+.btn-primary{
+  border-color: rgba(255,209,0,0.25);
+}
+
+.pill{
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+  padding: 10px 14px;
+  color: rgba(255,255,255,0.92);
+}
+
+.status-line{
+  min-height: 20px;
+  margin-top: 10px;
+  color: rgba(255,255,255,0.8);
+}
+
+.loadout-grid{
+  max-width: 1180px;
+  margin: 18px auto 0;
+  padding: 0 18px 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.card{
+  background: var(--hd2-card);
+  border: 1px solid var(--hd2-card-border);
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(0,0,0,0.45);
+  overflow: hidden;
+}
+
+.card-header{
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.card-title{
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--hd2-yellow);
+}
+
+.card-body{ padding: 14px; }
+
+.slot-block{ margin-bottom: 14px; }
+.slot-block:last-child{ margin-bottom: 0; }
+
+.slot-label{
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: rgba(255,209,0,0.95);
+  margin-bottom: 10px;
+}
+
+.item-row{
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.12);
+}
+
+.item-icon{
+  width: 86px;
+  height: 86px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.22);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.item-icon img{
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+}
+
+.item-name{
+  font-weight: 800;
+  color: var(--hd2-yellow);
+  line-height: 1.2;
+}
+
+.strat-list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.page-footer{
+  text-align: center;
+  padding: 18px 0 26px;
+  color: rgba(255,255,255,0.7);
+}
