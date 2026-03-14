@@ -1,9 +1,9 @@
 export default {
   name: "Automatons",
 
-  /* Can be used edit default rules
+  Can be used edit default rules
   rules: {
-    // Turn on ?even top-type selection? for stratagem slots (33/33/33 baseline)
+    Turn on ?even top-type selection? for stratagem slots (33/33/33 baseline)
     useEvenStratagemTop: true,
     maxSupportWeapons: 1,
     maxBackpackSlot: 1,
@@ -13,7 +13,7 @@ export default {
     enforceOneHandedIfRequired: true,
     ALLOW_EXPENDABLE_AS_GUARANTEED_SUPPORT: false,
   },
-  */
+  
 
   macro: {
     primarySubcategory: {
@@ -72,7 +72,7 @@ export default {
       arc: 1.00,
       energy_based: 1.00,
       explosive: 1.00,
-      expendable: 1.00,
+      expendable: 0.80,
       defensive: 1.00,
       offensive: 1.00,
       supply: 1.00,
