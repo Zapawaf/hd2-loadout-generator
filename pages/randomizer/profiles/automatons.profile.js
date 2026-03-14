@@ -36,7 +36,7 @@ export default {
     },
     stratagemTop: {
       Offensive: 1.00,
-      Defensive: 0.85,
+      Defensive: 0.55,
       Supply: 0.25,
     },
     offensiveSub: {
