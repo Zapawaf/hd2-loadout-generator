@@ -8,7 +8,8 @@
       "medium_pen",
       "one_handed",
       "demo",
-      "bug_hole"
+      "bug_hole",
+      "stealth"
     ]
   },
   {
@@ -20,8 +21,7 @@
       "heavy_pen",
       "two_handed",
       "demo",
-      "bug_hole",
-      "stealth"
+      "bug_hole"
     ]
   }
 ]

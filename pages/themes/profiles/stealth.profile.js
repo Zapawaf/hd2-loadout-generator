@@ -4,7 +4,8 @@ export const STEALTH_THEME = {
 
   rules: {
     requireSupportWeapon: true,
-    maxSupportWeapons: 1,
+    maxCarriedSupportWeapons: 1,
+    maxExpendableSupportWeapons: 1,  // max expendable-tagged support weapons, must increase maxSupplyStratagems
     maxBackpackSlot: 1,
     maxSupplyStratagems: 2,
     maxVehicles: 1,
@@ -17,7 +18,7 @@ export const STEALTH_THEME = {
 
   // ✅ CLOSES PROPERLY
   exclude: {
-    stratagemTagsAny: ["emplacement", "vehicle"],
+    stratagemTagsAny: ["emplacement", "vehicle", "mortar"],
     stratagemIds: [],
 
     primaryTagsAny: [],
@@ -57,10 +58,11 @@ export const STEALTH_THEME = {
       "lift_182_warp_pack",
       "lift_850_jump_pack",
       "lift_860_hover_pack",
-      "b_1_supply_pack"
+      "b_1_supply_pack",
+
     ],
 
-    stratagemAny: { tagsAny: ["defensive", "ems"] },
+    stratagemAny: { tagsAny: ["ems", "smoke", "mine"] },
   },
 
   macro: {

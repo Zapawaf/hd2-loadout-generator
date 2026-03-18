@@ -8,50 +8,139 @@
   <link rel="stylesheet" href="/pages/_shared/shared.css"/>
   <link rel="stylesheet" href="/pages/_shared/sidebar.css"/>
 
-  <!-- Match Randomizer look -->
+  <!-- Match the normal Themes / Randomizer layout -->
   <link rel="stylesheet" href="/pages/randomizer/desktop.css" media="(min-width: 901px)">
   <link rel="stylesheet" href="/pages/randomizer/mobile.css" media="(max-width: 900px)">
 
   <style>
-    .audit-wrap { max-width: 1100px; margin: 0 auto; }
-    .audit-controls { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin: 12px 0 16px; }
-    select, button { font-size: 16px; }
-    .audit-card { background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 12px; margin: 12px 0; }
-    .audit-grid { display:grid; grid-template-columns: 1fr; gap: 12px; }
-    @media (min-width: 901px) { .audit-grid { grid-template-columns: 1fr 1fr; } }
-    .audit-kv { display:grid; grid-template-columns: 1fr auto; gap: 6px 12px; }
-    .audit-kv div { padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .audit-kv div:last-child, .audit-kv div:nth-last-child(2) { border-bottom:none; }
-    code { color: var(--yellow); }
-    .muted { color: var(--muted); }
-    .warn { color: #ffb86b; }
-    .bad  { color: #ff6b6b; }
-    .good { color: #6bff9a; }
-    .small { font-size: 0.95rem; }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .audit-controls{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      margin: 0 auto 14px auto;
+    }
+
+    .audit-controls label{
+      color: var(--muted);
+    }
+
+    .audit-controls input[type="number"]{
+      width: 90px;
+      padding: 8px 10px;
+    }
+
+    .audit-controls select{
+      min-width: 170px;
+    }
+
+    .audit-status{
+      text-align:center;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .audit-stats-stack{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .audit-stats-stack .slot-card{
+      flex: 0 0 auto !important;
+    }
+
+    @media (max-width: 900px){
+      .audit-controls{
+        gap: 8px;
+      }
+
+      .audit-controls select,
+      .audit-controls input,
+      .audit-controls button{
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
-
 <body>
-  <div id="pageContent" class="audit-wrap">
+
+  <div id="pageContent">
+
     <h1>Helldivers 2 Loadout Generator</h1>
 
     <p class="wip-disclaimer">
-      <strong>Themes Audit:</strong> Quick sanity check for a theme’s candidate pools after rules are applied.
-      This page is self-contained and does not modify Randomizer code.
+      <strong>Themes Audit:</strong> manually force a theme to test picks, simulate runs, and view local statistics.
     </p>
 
     <div class="audit-controls">
-      <label for="themeSelect" class="muted">Theme</label>
-      <select id="themeSelect"></select>
-      <button id="analyzeBtn">Analyze</button>
-      <span id="status" class="muted small"></span>
+      <label for="theme-select">Theme</label>
+      <select id="theme-select"></select>
+
+      <button id="generate-btn">Generate Themed Loadout</button>
+      <button id="analyze-btn">Analyze</button>
+
+      <label for="sim-runs">Sim</label>
+      <input id="sim-runs" type="number" min="10" max="20000" step="10" value="500" />
+      <button id="simulate-btn">Simulate</button>
+      <button id="simulate-reset-btn">Clear Sim</button>
+
+      <span id="theme-picked" style="color: var(--muted); margin-left: 10px;"></span>
     </div>
 
-    <div id="out"></div>
+    <div id="status" class="audit-status">Loading…</div>
+
+    <div class="results loadout-grid">
+      <div class="loadout-left">
+        <div class="loadout-group">
+          <div class="group-title">Equipment</div>
+
+          <div id="equip-primary"></div>
+          <div id="equip-secondary"></div>
+          <div id="equip-throwable"></div>
+        </div>
+      </div>
+
+      <div class="loadout-right">
+        <div class="slot-card">
+          <strong>Stratagems</strong>
+          <ul id="strat-list" class="stratagem-list"></ul>
+        </div>
+
+        <div class="audit-stats-stack">
+          <div id="theme-roll-stats" class="slot-card"></div>
+          <div id="theme-chance-stats" class="slot-card"></div>
+          <div id="theme-sim-results" class="slot-card"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="licenseFooter" class="license-footer">
+      <p>
+        This fan-made Helldivers 2 loadout randomizer is not affiliated with or endorsed by Arrowhead Game Studios.
+      </p>
+      <p>
+        Visual assets are sourced from the Helldivers Wiki (wiki.gg),
+        with contributions from individual wiki editors.
+        Licensed under Creative Commons Attribution–NonCommercial–ShareAlike 4.0 (CC BY-NC-SA 4.0).
+        Assets may have been resized or modified.
+      </p>
+      <p>
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">
+          https://creativecommons.org/licenses/by-nc-sa/4.0/
+        </a>
+        &nbsp;|&nbsp;
+        <a href="https://helldivers.wiki.gg/" target="_blank" rel="noopener noreferrer">
+          https://helldivers.wiki.gg/
+        </a>
+      </p>
+    </footer>
+
   </div>
 
-  <script src="/pages/_shared/sidebar.js"></script>
-  <script type="module" src="./audit.js"></script>
+  <script type="module" src="/pages/_shared/sidebar.js"></script>
+  <script type="module" src="/pages/themes/themes.js"></script>
 </body>
 </html>

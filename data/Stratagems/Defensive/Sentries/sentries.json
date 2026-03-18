@@ -34,7 +34,8 @@
       "sentry",
       "explosive",
       "medium_pen",
-      "horde_control"
+      "horde_control",
+      "mortar"
     ],
     "call_in_sec": 4.75,
     "cooldown_sec": 153.9
@@ -48,7 +49,8 @@
       "sentry",
       "ems",
       "stun",
-      "horde_control"
+      "horde_control",
+      "mortar"
     ],
     "call_in_sec": 4.75,
     "cooldown_sec": 153.9
@@ -133,7 +135,8 @@
       "defensive",
       "sentry",
       "gas",
-      "horde_control"
+      "horde_control",
+      "mortar"
     ],
     "call_in_sec": 4.75,
     "cooldown_sec": 153.9
