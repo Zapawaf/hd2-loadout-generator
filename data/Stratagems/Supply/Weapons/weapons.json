@@ -435,6 +435,21 @@
     ],
     "call_in_sec": 4.75,
     "cooldown_sec": 119.7
+  },
+  {
+    "id": "b_flam_80_cremator",
+    "name": "B/FLAM-80 Cremator",
+    "icon": "img/Stratagems/Supply/Weapons/b_flam_80_cremator.png",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "uses_backpack_slot",
+      "incendiary",
+      "horde_control",
+      "heavy_pen"
+    ],
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   }
 
 ]

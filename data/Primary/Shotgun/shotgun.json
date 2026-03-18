@@ -101,5 +101,16 @@
       "rounds_reload",
       "incendiary"
     ]
+  },
+  {
+    "id": "sg_97_sweeper",
+    "name": "SG-97 Sweeper",
+    "icon": "img/Primary/Shotgun/sg_97_sweeper.png",
+    "tags": [
+      "shotgun",
+      "medium_pen",
+      "two_handed",
+      "melee"
+    ]
   }
 ]

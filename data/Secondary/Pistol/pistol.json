@@ -61,5 +61,16 @@
       "one_handed",
       "rounds_reload"
     ]
+  },
+  {
+    "id": "p_69_veto",
+    "name": "P-69 Veto",
+    "icon": "img/Secondary/Pistol/p_69_veto.png",
+    "tags": [
+      "pistol",
+      "light_pen",
+      "one_handed",
+      "stagger"
+    ]
   }
 ]

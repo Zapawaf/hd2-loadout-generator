@@ -50,5 +50,15 @@
       "medium_pen",
       "one_handed"
     ]
+  },
+  {
+    "id": "cqc_73_entrenchment_tool",
+    "name": "CQC-73 Entrenchment Tool",
+    "icon": "img/Secondary/Melee/cqc_73_entrenchment_tool.png",
+    "tags": [
+      "melee",
+      "medium_pen",
+      "one_handed"
+    ]
   }
 ]

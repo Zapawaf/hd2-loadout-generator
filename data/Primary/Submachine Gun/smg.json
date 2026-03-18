@@ -60,5 +60,16 @@
       "one_handed",
       "stagger"
     ]
+  },
+  {
+    "id": "smg_flam_34_stoker",
+    "name": "SMG/FLAM-34 Stoker",
+    "icon": "img/Primary/Submachine Gun/smg_flam_34_stoker.png",
+    "tags": [
+      "submachine_gun",
+      "light_pen",
+      "one_handed",
+      "incendiary"
+    ]
   }
 ]

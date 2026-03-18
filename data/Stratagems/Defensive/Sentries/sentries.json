@@ -124,5 +124,18 @@
     ],
     "call_in_sec": 4.75,
     "cooldown_sec": 102.6
+  },
+  {
+    "id": "a_gm_17_gas_mortar_sentry",
+    "name": "A/GM-17 Gas Mortar Sentry",
+    "icon": "img/Stratagems/Defensive/Sentries/a_gm_17_gas_mortar_sentry.png",
+    "tags": [
+      "defensive",
+      "sentry",
+      "gas",
+      "horde_control"
+    ],
+    "call_in_sec": 4.75,
+    "cooldown_sec": 153.9
   }
 ]

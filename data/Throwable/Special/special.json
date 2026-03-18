@@ -171,5 +171,17 @@
      "self_defense",
      "horde_control"
     ]
+  },
+  {
+    "id": "g_48_giga_grenade",
+    "name": "G-48 Giga Grenade",
+    "icon": "img/Throwable/Special/g_48_giga_grenade.png",
+    "tags": [
+     "special",
+     "anti_tank",
+     "explosive",
+     "demo",
+     "bug_hole"
+    ]
   }
 ]
