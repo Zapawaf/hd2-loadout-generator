@@ -44,9 +44,9 @@
       Orbitals: 1.20,
     },
     defensiveSub: {
-      Sentries: 0.80,
-      Mines: 0.70,
-      Emplacements: 0.40,
+      Sentries: 1.00,
+      Mines: 0.80,
+      Emplacements: 0.60,
     },
     supplySub: {
       Weapons: 1.00,
@@ -62,7 +62,7 @@
       guided: 1.00,
       heavy_pen: 1.10,
       anti_tank: 1.20,
-      demo: 1.60,
+      demo: 1.40,
       bug_hole: 1.00,
       incendiary: 1.00,
       smoke: 1.00,

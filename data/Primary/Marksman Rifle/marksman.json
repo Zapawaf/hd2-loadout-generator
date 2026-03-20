@@ -6,7 +6,8 @@
     "tags": [
       "marksmen_rifle",
       "light_pen",
-      "two_handed"
+      "two_handed",
+      "melee"
     ]
   },
   {
@@ -17,7 +18,8 @@
       "marksmen_rifle",
       "medium_pen",
       "two_handed",
-      "rounds_reload"
+      "rounds_reload",
+      "melee"
     ]
   },
   {

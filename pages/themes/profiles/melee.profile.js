@@ -10,23 +10,24 @@ export const MELEE_THEME = {
   // This profile uses a STRATAGEM ID WHITELIST so the theme cannot wander into Cluster Bomb / Guard Dogs / Exos / Vehicles.
 
   rules: {
-    // Allow picking Solo Silo as an extra support, but still guarantee a melee support first via forced pick.
-    maxSupportWeapons: 1,
+    requireSupportWeapon: true,
+    maxCarriedSupportWeapons: 1,
+    maxExpendableSupportWeapons: 1,  // max expendable-tagged support weapons, must increase maxSupplyStratagems
     maxBackpackSlot: 1,
-    maxSupplyStratagems: 3,
+    maxSupplyStratagems: 2,
+    maxVehicles: 1,
     preventDoubleExosuit: true,
     soloSiloCannotBeOnlySupport: true,
-    enforceOneHandedIfRequired: true,
+    enforceOneHandedIfRequired: false,
     ALLOW_EXPENDABLE_AS_GUARANTEED_SUPPORT: false,
-
-    // Keep your existing behavior:
-    allowFallback: true
+    allowFallback: true,
   },
 
+
   slotTheme: {
-    primary:    { enabled: true,  chance: 0   }, // melee theme doesn't constrain primary
+    primary:    { enabled: true,  chance: 100 }, // melee theme doesn't constrain primary
     secondary:  { enabled: true,  chance: 100 }, // MUST be melee when possible
-    throwable:  { enabled: true,  chance: 100   }, // not constrained
+    throwable:  { enabled: true,  chance: 100 }, // not constrained
     stratagems: { enabled: true,  chance: 100 }
   },
 
@@ -34,7 +35,8 @@ export const MELEE_THEME = {
   forcedFirstPick: { tagsAny: ["melee"] },
 
   requiredPools: {
-    // Must be a melee secondary every time (if you have melee-tagged secondaries in the pool)
+      // Must be a melee secondary every time (if you have melee-tagged secondaries in the pool)
+    primaryAny: { tagsAny: ["melee"] },
     secondaryAny: { tagsAny: ["melee"] },
     throwableAny: { tagsAny: ["melee", "stun", "smoke"] },
     throwableIds: ["tm_1_lure_mine"],

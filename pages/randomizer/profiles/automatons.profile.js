@@ -1,9 +1,9 @@
 export default {
   name: "Automatons",
 
-  Can be used edit default rules
+  /* Can be used edit default rules
   rules: {
-    Turn on ?even top-type selection? for stratagem slots (33/33/33 baseline)
+    // Turn on ?even top-type selection? for stratagem slots (33/33/33 baseline)
     useEvenStratagemTop: true,
     maxSupportWeapons: 1,
     maxBackpackSlot: 1,
@@ -13,7 +13,7 @@ export default {
     enforceOneHandedIfRequired: true,
     ALLOW_EXPENDABLE_AS_GUARANTEED_SUPPORT: false,
   },
-  
+  */
 
   macro: {
     primarySubcategory: {
@@ -22,11 +22,11 @@ export default {
       Shotgun: 0.70,
       "Marksmen Rifle": 0.60,
       "Energy-Based": 1.00,
-      Explosive: 0.85,
+      Explosive: 1.00,
       Special: 1.00,
     },
     secondarySubcategory: {
-      Pistol: 1.25,
+      Pistol: 1.00,
       Melee: 1.00,
       Special: 1.00,
     },
@@ -36,7 +36,7 @@ export default {
     },
     stratagemTop: {
       Offensive: 1.00,
-      Defensive: 0.55,
+      Defensive: 0.85,
       Supply: 0.25,
     },
     offensiveSub: {
@@ -44,8 +44,8 @@ export default {
       Orbitals: 1.20,
     },
     defensiveSub: {
-      Sentries: 0.85,
-      Mines: 0.70,
+      Sentries: 1.00,
+      Mines: 0.80,
       Emplacements: 0.40,
     },
     supplySub: {
@@ -61,18 +61,18 @@ export default {
       ems: 1.00,
       guided: 1.00,
       heavy_pen: 1.30,
-      anti_tank: 1.50,
+      anti_tank: 1.30,
       demo: 1.30,
       bug_hole: 1.00,
-      incendiary: 0.70,
-      smoke: 0.80,
+      incendiary: 1.00,
+      smoke: 1.00,
       gas: 1.00,
       stealth: 1.00,
       stagger: 1.00,
       arc: 1.00,
       energy_based: 1.00,
       explosive: 1.00,
-      expendable: 0.80,
+      expendable: 1.00,
       defensive: 1.00,
       offensive: 1.00,
       supply: 1.00,
