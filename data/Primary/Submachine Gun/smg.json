@@ -71,5 +71,15 @@
       "one_handed",
       "incendiary"
     ]
+  },  
+  {
+    "id": "SMG-203_Gallant",
+    "name": "SMG-203 Gallant",
+    "icon": "img/Primary/Submachine Gun/SMG-203_Gallant.png",
+    "tags": [
+      "submachine_gun",
+      "medium_pen",
+      "one_handed"
+    ]
   }
 ]

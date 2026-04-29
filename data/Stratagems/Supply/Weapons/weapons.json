@@ -450,6 +450,19 @@
     ],
     "call_in_sec": 4.75,
     "cooldown_sec": 410.4
+  },
+  {
+    "id": "MGX-42_Bullet_Storm",
+    "name": "MGX-42 Bullet Storm",
+    "icon": "img/Stratagems/Supply/Weapons/MGX-42_Bullet_Storm.png",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "light_pen",
+      "expendable"
+    ],
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
   }
 
 ]

@@ -106,5 +106,16 @@
       "gas",
       "stealth"
     ]
+  },
+  {
+    "id": "P-33_Missile_Pistol",
+    "name": "P-33 Missile Pistol",
+    "icon": "img/Secondary/Special/P-33_Missile_Pistol.png",
+    "tags": [
+      "special",
+      "medium_pen",
+      "one_handed",
+      "guided"
+    ]
   }
 ]

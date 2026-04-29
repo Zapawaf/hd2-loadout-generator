@@ -64,5 +64,37 @@
     ],
     "call_in_sec": 10.5,
     "cooldown_sec": 780
+  },
+  {
+    "id": "EXO-51_Lumberer_Exosuit",
+    "name": "EXO-51 Lumberer Exosuit",
+    "icon": "img/Stratagems/Supply/Vehicles/EXO-51_Lumberer_Exosuit.png",
+    "tags": [
+      "supply",
+      "vehicle",
+      "explosive",
+      "anti_tank",
+      "demo",
+      "horde_control",
+      "bug_hole",
+      "incendiary"
+    ],
+    "call_in_sec": 10.5,
+    "cooldown_sec": 570
+  },
+  {
+    "id": "EXO-55_Breakthrough_Exosuit",
+    "name": "EXO-55 Breakthrough Exosuit",
+    "icon": "img/Stratagems/Supply/Vehicles/EXO-55_Breakthrough_Exosuit.png",
+    "tags": [
+      "supply",
+      "vehicle",
+      "horde_control",
+      "heavy_pen"
+    ],
+    "call_in_sec": 10.5,
+    "cooldown_sec": 570
   }
+  
 ]
+
