@@ -39,7 +39,7 @@ export const GUIDED_LOCKON_THEME = {
   requiredPools: {
   // Force the exact Guided kit you described
   primaryIds:   ["jar_5_dominator"],
-  secondaryIds: ["p_92_warrant, P-33_Missile_Pistol"],
+  secondaryIds: ["p_92_warrant", "P-33_Missile_Pistol"],
   throwableIds: ["g_50_seeker"],
 
   // Limit stratagems to the guided/lock-on set:
