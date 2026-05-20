@@ -50,6 +50,7 @@
     "icon": "img/Secondary/Special/gp_31_grenade_pistol.png",
     "tags": [
       "special",
+      "pistol",
       "medium_pen",
       "one_handed",
       "explosive",
@@ -63,6 +64,7 @@
     "icon": "img/Secondary/Special/las_7_dagger.png",
     "tags": [
       "special",
+      "pistol",
       "light_pen",
       "one_handed",
       "beam",
@@ -76,6 +78,7 @@
     "icon": "img/Secondary/Special/gp_20_ultimatum.png",
     "tags": [
       "special",
+      "pistol",
       "one_handed",
       "anti_tank",
       "demo",
@@ -89,6 +92,7 @@
     "icon": "img/Secondary/Special/plas_15_loyalist.png",
     "tags": [
       "special",
+      "pistol",
       "medium_pen",
       "one_handed",
       "chargeup",
@@ -101,6 +105,7 @@
     "icon": "img/Secondary/Special/p_35_re_educator.png",
     "tags": [
       "special",
+      "pistol",
       "heavy_pen",
       "one_handed",
       "gas",
@@ -113,6 +118,7 @@
     "icon": "img/Secondary/Special/P-33_Missile_Pistol.png",
     "tags": [
       "special",
+      "pistol",
       "medium_pen",
       "one_handed",
       "guided"
