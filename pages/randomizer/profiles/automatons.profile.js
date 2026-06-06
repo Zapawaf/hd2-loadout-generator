@@ -18,7 +18,7 @@ export default {
   macro: {
     primarySubcategory: {
       "Assault Rifle": 1.00,
-      "Submachine Gun": 1.00,
+      "Submachine Gun": 0.8,
       Shotgun: 0.70,
       "Marksmen Rifle": 0.60,
       "Energy-Based": 1.00,
@@ -27,7 +27,7 @@ export default {
     },
     secondarySubcategory: {
       Pistol: 1.00,
-      Melee: 1.00,
+      Melee: 0.70,
       Special: 1.00,
     },
     throwableSubcategory: {
@@ -60,8 +60,8 @@ export default {
       stun: 1.00,
       ems: 1.00,
       guided: 1.00,
-      heavy_pen: 1.30,
-      anti_tank: 1.30,
+      heavy_pen: 1.40,
+      anti_tank: 1.40,
       demo: 1.30,
       bug_hole: 1.00,
       incendiary: 1.00,
@@ -82,8 +82,8 @@ export default {
       support_weapon: 1.00,
       uses_backpack_slot: 1.00,
       requires_one_handed_primary: 1.00,
-      medium_pen: 1.25,
-      light_pen: 0.90,
+      medium_pen: 1.35,
+      light_pen: 0.80,
     },
     id: {
       example_item_id_here: 1.00,
