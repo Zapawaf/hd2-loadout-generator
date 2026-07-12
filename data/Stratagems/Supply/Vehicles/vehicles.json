@@ -94,6 +94,19 @@
     ],
     "call_in_sec": 10.5,
     "cooldown_sec": 570
+  },
+  {
+    "id": "M-103_Supply_FRV",
+    "name": "M-103 Supply FRV",
+    "icon": "img/Stratagems/Supply/Vehicles/M-103_Supply_FRV.png",
+    "tags": [
+      "supply",
+      "vehicle",
+      "resupply",
+      "medium_pen"
+    ],
+    "call_in_sec": 10.5,
+    "cooldown_sec": 480
   }
   
 ]
