@@ -63,5 +63,16 @@
       "two_handed",
       "stealth"
     ]
+  },
+  {
+    "id": "R-4_Hyena",
+    "name": "R-4 Hyena",
+    "icon": "img/Primary/Marksman Rifle/R-4_Hyena.png",
+    "tags": [
+      "marksmen_rifle",
+      "medium_pen",
+      "two_handed",
+      "Incendiary"
+    ]
   }
 ]
