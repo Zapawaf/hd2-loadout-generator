@@ -146,7 +146,8 @@
       "demo",
       "bug_hole",
       "stealth",
-      "horde_control"
+      "horde_control",
+      "mine"
     ]
   },
   {
@@ -182,6 +183,19 @@
      "explosive",
      "demo",
      "bug_hole"
+    ]
+  },
+  {
+    "id": "G40-K_Melta_Mine",
+    "name": "G40-K Melta Mine",
+    "icon": "img/Throwable/Special/G40-K_Melta_Mine.png",
+    "tags": [
+     "special",
+     "anti_tank",
+     "explosive",
+     "demo",
+     "bug_hole",
+     "mine"
     ]
   }
 ]

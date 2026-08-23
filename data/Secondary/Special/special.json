@@ -123,5 +123,17 @@
       "one_handed",
       "guided"
     ]
+  },
+  {
+    "id": "P40-K_Bolt_Pistol",
+    "name": "P/40-K Bolt Pistol",
+    "icon": "img/Secondary/Special/P40-K_Bolt_Pistol.png",
+    "tags": [
+      "special",
+      "pistol",
+      "heavy_pen",
+      "one_handed",
+      "explosive"
+    ]
   }
 ]
