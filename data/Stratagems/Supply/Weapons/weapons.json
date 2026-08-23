@@ -463,6 +463,18 @@
     ],
     "call_in_sec": 4.75,
     "cooldown_sec": 410.4
+  },
+  {
+    "id": "40-K_Meltagun",
+    "name": "40-K Meltagun",
+    "icon": "img/Stratagems/Supply/Weapons/40-K_Meltagun.png",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "anti_tank",
+      "chargeup"
+    ],
+    "call_in_sec": 7.75,
+    "cooldown_sec": 410.4
   }
-
 ]

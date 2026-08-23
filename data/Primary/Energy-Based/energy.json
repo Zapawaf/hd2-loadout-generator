@@ -99,5 +99,17 @@
       "light_pen",
       "energy_based"
     ]
+  },
+  {
+    "id": "R40-K_Hot-Shot_Marksman_Rifle",
+    "name": "R40-K Hot-Shot Marksman Rifle",
+    "icon": "img/Primary/Energy-Based/R40-K_Hot-Shot_Marksman_Rifle.png",
+    "tags": [
+      "energy_based", 
+      "two_handed",
+      "medium_pen",
+      "energy_based",
+      "marksmen"
+    ]
   }
 ]
