@@ -94,7 +94,7 @@ export const TEMPLATE_THEME = {
       "Assault Rifle": 1.00,
       "Submachine Gun": 1.00,
       "Shotgun": 1.00,
-      "Marksmen Rifle": 1.00,
+      "Marksman Rifle": 1.00,
       "Energy-Based": 1.00,
       "Explosive": 1.00,
       "Special": 1.00,

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "R-40_Sightliner",
+    "name": "R-40 Sightliner",
+    "icon": "img/Primary/Sniper/R-40_Sightliner.png",
+    "tags": [
+      "sniper",
+      "heavy_pen",
+      "two_handed"
+    ]
+  }
+]

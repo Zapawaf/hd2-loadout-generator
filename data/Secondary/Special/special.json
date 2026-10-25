@@ -135,5 +135,18 @@
       "one_handed",
       "explosive"
     ]
+  },
+  {
+    "id": "P-34_Breacher",
+    "name": "P-34 Breacher",
+    "icon": "img/Secondary/Special/P-34_Breacher.png",
+    "tags": [
+      "pistol",
+      "special",
+      "anti_tank",
+      "one_handed",
+      "bug_hole",
+      "demo"
+    ]
   }
 ]

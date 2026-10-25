@@ -197,5 +197,40 @@
      "bug_hole",
      "mine"
     ]
+  },
+  {
+    "id": "G-11_Caltrops",
+    "name": "G-11 Caltrops",
+    "icon": "img/Throwable/Special/G-11_Caltrops.png",
+    "tags": [
+     "special",
+     "medium_pen",
+     "stun",
+     "mine",
+     "sticky"
+    ]
+  },
+  {
+    "id": "G-8_Immolation",
+    "name": "G-8_Immolatione",
+    "icon": "img/Throwable/Special/G-8_Immolation.png",
+    "tags": [
+     "special",
+     "heavy_pen",
+     "explosive",
+     "incendiary"
+    ]
+  },
+  {
+    "id": "G-60_Anti-Tank_Seeker",
+    "name": "G-60_Anti-Tank_Seeker",
+    "icon": "img/Throwable/Special/G-60_Anti-Tank_Seeker.png",
+    "tags": [
+     "special",
+     "anti_tank",
+     "explosive",
+     "guided"
+    ]
   }
+  
 ]

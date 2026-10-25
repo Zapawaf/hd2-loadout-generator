@@ -20,10 +20,11 @@
       "Assault Rifle": 1.00,
       "Submachine Gun": 1.00,
       Shotgun: 0.80,
-      "Marksmen Rifle": 0.70,
+      "Marksman Rifle": 0.70,
       "Energy-Based": 1.00,
       Explosive: 1.00,
       Special: 1.00,
+      Sniper: 1.00,
     },
     secondarySubcategory: {
       Pistol: 1.00,

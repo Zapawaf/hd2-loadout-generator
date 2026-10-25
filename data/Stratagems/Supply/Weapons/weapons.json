@@ -474,6 +474,33 @@
       "anti_tank",
       "chargeup"
     ],
+    "call_in_sec": 4.75,
+    "cooldown_sec": 410.4
+  },
+  {
+    "id": "AWM-20_Apex",
+    "name": "AWM-20 Apex",
+    "icon": "img/Stratagems/Supply/Weapons/AWM-20_Apex.png",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "anti_tank",
+      "uses_backpack_slot"
+    ],
+    "call_in_sec": 4.75,
+    "cooldown_sec": 456
+  },
+  {
+    "id": "LAS-44_Nova",
+    "name": "LAS-44 Nova",
+    "icon": "img/Stratagems/Supply/Weapons/LAS-44_Nova.png",
+    "tags": [
+      "supply",
+      "support_weapon",
+      "heat",
+      "heavy_pen",
+      "energy_based"
+    ],
     "call_in_sec": 7.75,
     "cooldown_sec": 410.4
   }

@@ -72,5 +72,15 @@
       "one_handed",
       "stagger"
     ]
+  },
+  {
+    "id": "P-44_Mist",
+    "name": "P-44 Mist",
+    "icon": "img/Secondary/Pistol/P-44_Mist.png",
+    "tags": [
+      "pistol",
+      "light_pen",
+      "one_handed"
+    ]
   }
 ]

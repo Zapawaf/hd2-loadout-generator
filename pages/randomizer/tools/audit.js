@@ -5,10 +5,11 @@ const DATA_PATHS = {
         "/data/Primary/Assault Rifle/assault.json",
         "/data/Primary/Energy-Based/energy.json",
         "/data/Primary/Explosive/explosive.json",
-        "/data/Primary/Marksmen Rifle/marksman.json",
+        "/data/Primary/Marksman Rifle/marksman.json",
         "/data/Primary/Shotgun/shotgun.json",
         "/data/Primary/Special/special.json",
-        "/data/Primary/Submachine Gun/smg.json"
+        "/data/Primary/Submachine Gun/smg.json",
+        "/data/Primary/Sniper/sniper.json"
     ],
     secondaries: [
         "/data/Secondary/Melee/melee.json",

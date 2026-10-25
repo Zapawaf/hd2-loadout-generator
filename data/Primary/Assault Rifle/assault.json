@@ -124,5 +124,17 @@
       "two_handed",
       "stealth"
     ]
+  },
+  {
+    "id": "AR-11_Arbitrator",
+    "name": "AR-11 Arbitrator",
+    "icon": "img/Primary/Assault Rifle/AR-11_Arbitrator.png",
+    "tags": [
+      "assault_rifle",
+      "light_pen",
+      "medium_pen",
+      "two_handed",
+      "shotgun"
+    ]
   }
 ]

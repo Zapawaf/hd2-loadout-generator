@@ -23,5 +23,18 @@
       "demo",
       "bug_hole"
     ]
+  },
+  {
+    "id": "GL-15_Evictor",
+    "name": "GL-15 Evictor",
+    "icon": "img/Primary/Explosive/GL-15_Evictor.png",
+    "tags": [
+      "explosive",
+      "medium_pen",
+      "two_handed",
+      "demo",
+      "bug_hole",
+      "shotgun"
+    ]
   }
 ]
